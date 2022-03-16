@@ -24,12 +24,13 @@ public class HeadBobController : MonoBehaviour
 
     private void PlayMotion(Vector3 motion)
     {
-        _camera.localPosition += motion;
+        _camera.localPosition += motion * Time.deltaTime;
     }
 
     private void CheckMotion()
     {
-        float speed = new Vector3(_controller.velocity.x, 0, _controller.velocity.z).magnitude;
+        float speed = new Vector3(_controller.velocity.x, 0, _controller.velocity.z).magnitude;     
+        //Debug.Log(speed);
         ResetPosition();
 
         if (speed < _toggleSpeed) return;
