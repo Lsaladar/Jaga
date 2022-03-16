@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public float maxStamina = 100f;
     public float playerStamina = 100f;
 
+    public float x;
+    public float z;
+
     public bool staminaFull = true;
 
     [SerializeField, Range (0, 50)] private float staminaRegen = 0.5f;
@@ -26,9 +29,11 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    bool isGrounded;
+    public bool isGrounded;
 
     Vector3 velocity;
+
+    public Vector3 move;
 
     public bool isWalking = true;
 
@@ -40,15 +45,10 @@ public class PlayerController : MonoBehaviour
     // bool canInteract1 = false;
     // bool canInteract2 = false;
 
-    //private void Start()
-    //{
-    //    _staminaController = GetComponent<StaminaController>();
-    //}
-
-    //public void SetRunSpeed(float run)
-    //{
-    //    speed = run;
-    //}
+    void Start()
+    {
+        sliderCanvasGroup.alpha = 0;
+    }
 
     void Update()
     {
@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
 
                 if (playerStamina >= maxStamina - 0.1)
                 {
-                    speed = runSpeed;
                     sliderCanvasGroup.alpha = 0;
                     staminaFull = true;
                 }
@@ -125,12 +124,14 @@ public class PlayerController : MonoBehaviour
         if (staminaFull)
         {
             isWalking = false;
+            speed = runSpeed;
             playerStamina -= staminaDrain * Time.deltaTime;
             UpdateStamina(1);
 
             if (playerStamina <= 0.1)
             {
                 staminaFull = false;
+                speed = 4f;
                 sliderCanvasGroup.alpha = 0;
             }
         }
