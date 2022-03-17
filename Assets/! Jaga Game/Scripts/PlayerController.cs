@@ -35,8 +35,8 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 move;
 
+    public bool canMove = true;
     public bool isWalking = true;
-
     public bool isMoving = false;
 
     [SerializeField] private Slider staminaProgressUI = null;
@@ -54,7 +54,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if(canMove)
+        {
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
         {
@@ -111,6 +113,8 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);  
+        }
+        
 
         // if(canInteract1)
         // {
