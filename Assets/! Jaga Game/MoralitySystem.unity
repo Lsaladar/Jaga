@@ -4104,15 +4104,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1128599626}
   speed: 12
+  runSpeed: 8
+  maxStamina: 100
+  playerStamina: 100
+  x: 0
+  z: 0
+  staminaFull: 1
+  staminaRegen: 0.5
+  staminaDrain: 0.5
   gravity: -9.81
   jumpHeight: 9
-  groundChecker: {fileID: 847795014}
+  groundCheck: {fileID: 0}
   groundDistance: 0.4
-  ground:
+  groundMask:
     serializedVersion: 2
-    m_Bits: 1024
-  flowchart1: {fileID: 2039543233}
-  flowchart2: {fileID: 32233612}
+    m_Bits: 0
+  isGrounded: 0
+  move: {x: 0, y: 0, z: 0}
+  isWalking: 1
+  isMoving: 0
+  staminaProgressUI: {fileID: 0}
+  sliderCanvasGroup: {fileID: 0}
 --- !u!143 &1128599626
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4179,7 +4191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 32233612}
+  selectedFlowchart: {fileID: 2039543233}
 --- !u!4 &1175079801
 Transform:
   m_ObjectHideFlags: 1
@@ -4789,7 +4801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 426.9916, y: 605.8886}
+  scrollPos: {x: -168.84476, y: 362.61832}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -4800,8 +4812,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 2039543280}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 2039543234}
@@ -6908,8 +6919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 557.6504
-    y: -223.76375
+    x: 556.3346
+    y: -231.6585
     width: 109.21054
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6995,7 +7006,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 549.8546
-    y: -296.9916
+    y: -295.6758
     width: 130.26318
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
