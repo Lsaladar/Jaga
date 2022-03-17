@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
     public bool isWalking = true;
 
+    public bool isMoving = false;
+
     [SerializeField] private Slider staminaProgressUI = null;
     [SerializeField] private CanvasGroup sliderCanvasGroup = null;
 
@@ -65,6 +67,15 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
+
+        if(move.magnitude > 0)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
+        }
 
         if (isWalking)
         {
