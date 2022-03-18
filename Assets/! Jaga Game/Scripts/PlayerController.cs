@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-// using Fungus;
+using Fungus;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,14 +35,14 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 move;
 
-    public bool canMove = true;
+    private bool canMove = true;
     public bool isWalking = true;
     public bool isMoving = false;
 
-    [SerializeField] private Slider staminaProgressUI = null;
+    [SerializeField] private Image staminaProgressUI = null;
     [SerializeField] private CanvasGroup sliderCanvasGroup = null;
 
-    // public Flowchart flowchart1;
+    public Flowchart flowchart;
     // public Flowchart flowchart2;
     // bool canInteract1 = false;
     // bool canInteract2 = false;
@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        canMove = flowchart.GetBooleanVariable("CanMove");
+
         if(canMove)
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -154,7 +156,7 @@ public class PlayerController : MonoBehaviour
 
     void UpdateStamina(int num)
     {
-        staminaProgressUI.value = playerStamina / maxStamina;
+        staminaProgressUI.fillAmount = playerStamina / maxStamina;
 
         if (num == 0)
         {
