@@ -14,8 +14,13 @@ public class CharacterInteract : MonoBehaviour, IInteractable
         return "Talk with " + characterName;
     }
 
-    public void Interact()
+    public void ChristianInteract()
     {
-        flowchart.ExecuteBlock("First Interaction");
+        flowchart.ExecuteBlock("First Interaction Christian");
+    }
+
+    public void PaganInteract()
+    {
+        flowchart.ExecuteBlock("First Interaction Pagan");
     }
 }

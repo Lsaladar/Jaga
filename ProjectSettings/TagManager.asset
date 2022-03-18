@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Laser
   - Enemy
+  - Christian_NPC
+  - Pagan_NPC
   layers:
   - Default
   - TransparentFX

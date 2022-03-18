@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     public float maxStamina = 100f;
     public float playerStamina = 100f;
 
-    public float x;
-    public float z;
+    public float maxReputation = 100f;
+    public float playerReputation = 70f;
 
     public bool staminaFull = true;
 
@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     public bool isWalking = true;
     public bool isMoving = false;
 
+    [SerializeField] private Image reputationUI = null;
+
     [SerializeField] private Image staminaProgressUI = null;
     [SerializeField] private CanvasGroup sliderCanvasGroup = null;
 
@@ -55,6 +57,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         canMove = flowchart.GetBooleanVariable("CanMove");
+        playerReputation = flowchart.GetFloatVariable("Reputation");
+
+        UpdateReputation();
 
         if(canMove)
         {
@@ -116,24 +121,6 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);  
         }
-        
-
-        // if(canInteract1)
-        // {
-        //     if(Input.GetKeyDown(KeyCode.E))
-        //     {
-        //         flowchart1.ExecuteBlock("BeginSpeaking");
-        //         canInteract1 = false;
-        //     }
-        // }
-        // if (canInteract2)
-        // {
-        //     if (Input.GetKeyDown(KeyCode.E))
-        //     {
-        //         flowchart2.ExecuteBlock("BeginSpeaking");
-        //         canInteract2 = false;
-        //     }
-        // }
     }
 
     public void Sprinting()
@@ -168,15 +155,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // void OnTriggerEnter(Collider collider)
-    // {
-    //     if(collider.gameObject.tag == "Christian_NPC")
-    //     {
-    //         canInteract1 = true;
-    //     }
-    //     if (collider.gameObject.tag == "Pagen_NPC")
-    //     {
-    //         canInteract2 = true;
-    //     }
-    // }
+    void UpdateReputation()
+    {
+        reputationUI.fillAmount = playerReputation / maxReputation;
+    }
 }
