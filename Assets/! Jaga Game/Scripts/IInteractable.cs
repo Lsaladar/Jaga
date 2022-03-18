@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void Interact();
+    void ChristianInteract();
+    void PaganInteract();
     string GetDescription();
 }

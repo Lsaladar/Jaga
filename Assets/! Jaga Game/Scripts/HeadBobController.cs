@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class HeadBobController : MonoBehaviour
 {
+    public Flowchart flowchart;
+
     [SerializeField] private bool _enable = true;
 
     [SerializeField, Range(0, 0.1f)] private float _amplitude = 0.015f;
@@ -83,6 +86,8 @@ public class HeadBobController : MonoBehaviour
 
     private void Update()
     {
+        _enable = flowchart.GetBooleanVariable("HeadBob");
+
         if (!_enable) return;
 
         CheckMotion();

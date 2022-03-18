@@ -35,7 +35,15 @@ public class PlayerInteractions : MonoBehaviour
 
                 if(Input.GetKeyDown(KeyCode.E))
                 {
-                    interactable.Interact();
+                    if(hit.collider.tag == "Christian_NPC")
+                    {
+                        interactable.ChristianInteract();
+                    }
+                    else if(hit.collider.tag == "Pagan_NPC")
+                    {
+                        interactable.PaganInteract();
+                    }
+                    //interactable.Interact();
                 }
             }
         }
