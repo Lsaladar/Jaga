@@ -6,5 +6,7 @@ public interface IInteractable
 {
     void ChristianInteract();
     void PaganInteract();
-    string GetDescription();
+    void ItemInteract();
+    string GetCharacterDescription();
+    string GetItemDescription();
 }

@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class CharacterInteract : MonoBehaviour, IInteractable
+public class AllInteractions : MonoBehaviour, IInteractable
 {
     public Flowchart flowchart;
 
     public string characterName = "NPC";
+    public string itemName = "Item";
 
-    public string GetDescription()
+    public ItemInspect itemInspect;
+
+    public string GetCharacterDescription()
     {
         return "Talk with " + characterName;
+    }
+
+    public string GetItemDescription()
+    {
+        return "Pick up " + itemName;
     }
 
     public void ChristianInteract()
@@ -22,5 +30,10 @@ public class CharacterInteract : MonoBehaviour, IInteractable
     public void PaganInteract()
     {
         flowchart.ExecuteBlock("First Interaction Pagan");
+    }
+
+    public void ItemInteract()
+    {
+        itemInspect.isInspecting = true;
     }
 }
