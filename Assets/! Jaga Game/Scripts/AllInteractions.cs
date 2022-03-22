@@ -12,6 +12,9 @@ public class AllInteractions : MonoBehaviour, IInteractable
 
     public ItemInspect itemInspect;
 
+    public Transform inspectionDistance;
+    public Transform item;
+
     public string GetCharacterDescription()
     {
         return "Talk with " + characterName;
@@ -35,5 +38,6 @@ public class AllInteractions : MonoBehaviour, IInteractable
     public void ItemInteract()
     {
         itemInspect.isInspecting = true;
+        item.position = inspectionDistance.position;
     }
 }

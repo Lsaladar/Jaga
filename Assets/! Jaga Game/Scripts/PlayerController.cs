@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 move;
 
-    private bool canMove = true;
+    public bool canMove = true;
     public bool isWalking = true;
     public bool isMoving = false;
 
@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        canMove = flowchart.GetBooleanVariable("CanMove");
         playerReputation = flowchart.GetFloatVariable("Reputation");
 
         UpdateReputation();
@@ -127,6 +126,7 @@ public class PlayerController : MonoBehaviour
     {
         if (staminaFull)
         {
+            staminaProgressUI.color = new Vector4(255, 255, 255, 255);
             isWalking = false;
             speed = runSpeed;
             playerStamina -= staminaDrain * Time.deltaTime;
@@ -135,6 +135,7 @@ public class PlayerController : MonoBehaviour
             if (playerStamina <= 0.1)
             {
                 staminaFull = false;
+                staminaProgressUI.color = new Vector4(255, 0, 0, 255);
                 speed = 4f;
                 sliderCanvasGroup.alpha = 0;
             }
