@@ -1383,13 +1383,6 @@ MonoBehaviour:
   controller: {fileID: 782612035}
   speed: 4
   runSpeed: 8
-  maxStamina: 100
-  playerStamina: 100
-  maxReputation: 100
-  playerReputation: 70
-  staminaFull: 1
-  staminaRegen: 10
-  staminaDrain: 20
   gravity: -9.81
   jumpHeight: 0.75
   groundCheck: {fileID: 1339548492}
@@ -1402,6 +1395,13 @@ MonoBehaviour:
   canMove: 1
   isWalking: 0
   isMoving: 0
+  staminaFull: 1
+  maxStamina: 100
+  playerStamina: 100
+  staminaRegen: 10
+  staminaDrain: 20
+  maxReputation: 100
+  playerReputation: 70
   reputationUI: {fileID: 1147302086}
   staminaProgressUI: {fileID: 1961558420}
   sliderCanvasGroup: {fileID: 2002404375}
@@ -2764,11 +2764,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6798ca4e7dd576c45a2c0b989e807541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1849393024}
   isInspecting: 0
+  item: {fileID: 1849393024}
   originalPos: {fileID: 625075208}
   cam: {fileID: 1092653097}
-  rotationSpeed: 3.74
+  rotationSpeed: -10
 --- !u!65 &1849393021
 BoxCollider:
   m_ObjectHideFlags: 0

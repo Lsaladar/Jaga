@@ -30,11 +30,11 @@ public class ItemInspect : MonoBehaviour
         {
             cam.FreezeTime();
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 currPos = Input.mousePosition;
                 Vector3 offset = currPos - lastPos;
-                transform.RotateAround(transform.position, Vector3.up, offset.x * rotationSpeed);
+                transform.RotateAround(transform.position, Vector3.up, offset.x * rotationSpeed * Time.deltaTime);
             }
             lastPos = Input.mousePosition;
 
