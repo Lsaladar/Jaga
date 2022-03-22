@@ -11,24 +11,24 @@ public class Settings : MonoBehaviour
 
     void Start()
     {
-        Screen.resolutions;
-    }
-
-    public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
+        resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
 
-        for (int i = 0; i < resolutions.Lenght; i++)
+        for (int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + "X" + resolutions[i].height;
             options.Add(option);
         }
 
         resolutionDropdown.AddOptions(options);
+    }
+
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
     }
 
     public void SetFullscreen(bool isFullscreen)
