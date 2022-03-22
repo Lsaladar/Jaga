@@ -11,7 +11,6 @@ public class PlayerInteractions : MonoBehaviour
     public GameObject interactionUI;
     public TextMeshProUGUI interactionText;
 
-
     void Update()
     {
         InteractionRay();
