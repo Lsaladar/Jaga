@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Christian_NPC
   - Pagan_NPC
+  - DesPoints
   layers:
   - Default
   - TransparentFX
