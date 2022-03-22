@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeadBobController : MonoBehaviour
 {
-    [SerializeField] public bool _enable = true;
+    public bool _enable = true;
 
     [SerializeField, Range(0, 0.1f)] private float _amplitude = 0.015f;
     [SerializeField, Range(0, 30)] private float _frequency = 10f;

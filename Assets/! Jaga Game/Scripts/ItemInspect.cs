@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof(AllInteractions))]
 public class ItemInspect : MonoBehaviour
 {
-    public Transform item;
-
     public bool isInspecting = false;
+
+    public Transform item;
 
     public Transform originalPos;
 

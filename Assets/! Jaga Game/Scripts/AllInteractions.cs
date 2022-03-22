@@ -7,9 +7,11 @@ public class AllInteractions : MonoBehaviour, IInteractable
 {
     public Flowchart flowchart;
 
+    [Header("Names")]
     public string characterName = "NPC";
     public string itemName = "Item";
 
+    [Header("Item Variables")]
     public ItemInspect itemInspect;
 
     public Transform inspectionDistance;
