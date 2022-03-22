@@ -5,18 +5,31 @@ using UnityEngine.AI;
 
 public class NPCNavMesh : MonoBehaviour
 {
-    
-    
+    [SerializeField] private GameObject[] des;
 
-    // Start is called before the first frame update
-    void Start()
+    private NavMeshAgent navMeshAgent;
+
+    private void Awake()
     {
-        
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        DestSelect();   
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        //if (other.gameObject.tag == "")
+    }
+
+    private void DestSelect()
+    {
+        int rand = Random.Range(0, 9);
+
+        navMeshAgent.destination = des[rand].transform.position;
+
+        Debug.Log(des[rand]);
     }
 }
