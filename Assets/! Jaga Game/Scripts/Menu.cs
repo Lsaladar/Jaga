@@ -4,9 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
 
 public class Menu : MonoBehaviour
 {
+    Resolution[] resolutions;
+    [Tooltip("Creates a list for the resolution used in the dropdown menu")] public TMPro.TMP_Dropdown resolutionDropdown;
+
+    AduioSource audioData;
+
+    public GameObject audioSource;
+
+    public GameObject audioSource;
+
     public void StartGame()
     {
         SceneManager.LoadScene("Character Controller tests");
@@ -17,9 +27,6 @@ public class Menu : MonoBehaviour
         Application.Quit();
         Debug.Log("Game is now turned off");
     }
-
-    Resolution[] resolutions;
-    [Tooltip("Creates a list for the resolution used in the dropdown menu")] public TMPro.TMP_Dropdown resolutionDropdown;
 
     void Start()
     {
@@ -45,6 +52,9 @@ public class Menu : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        audioData = GetComponent<AduioSource>();
+        audioData.Play(0);
     }
 
     public void SetResolution(int resolutionIndex)
@@ -61,5 +71,21 @@ public class Menu : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("MusicVolumeMixer", Mathf.Log10(volume) * 20);
+        Debug.Log(volume);
+    }
+
+    public void OnBeingDrag()
+    {
+        audioSource.SetActive(true);
+    }
+
+    public void OnEndDrag()
+    {
+        audioSource.SetActive(false);
     }
 }
