@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(Rigidbody))]
 public class NPCNavMesh : MonoBehaviour
 {
     [SerializeField] private GameObject[] des;
@@ -30,32 +31,11 @@ public class NPCNavMesh : MonoBehaviour
         DestSelect();   
     }
 
-    private void Update()
-    {
-        if (atDes == true)
-        {
-            FunctionTimer.Create(DestSelect, 0.5f);
-
-        }
-
-        DestSelect();
-    }
-
     void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "DesPoints")
-        {
-            atDes = true;
-        }
-    }
+    {       
+        FunctionTimer.Create(DestSelect, Random.Range(10f, 20f));
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "DesPoints")
-        {
-            atDes = false;
-        }
+        //Debug.Log("e");
     }
-
 
 }
