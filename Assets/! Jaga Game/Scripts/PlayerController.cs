@@ -4,23 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
 
+[RequireComponent (typeof(HeadBobController))]
+[RequireComponent (typeof(PlayerInteractions))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement Variables")]
     public CharacterController controller;
 
     public float speed = 4f;
     public float runSpeed = 8f;
-
-    public float maxStamina = 100f;
-    public float playerStamina = 100f;
-
-    public float maxReputation = 100f;
-    public float playerReputation = 70f;
-
-    public bool staminaFull = true;
-
-    [SerializeField, Range (0, 50)] private float staminaRegen = 0.5f;
-    [SerializeField, Range (0, 50)] private float staminaDrain = 0.5f;
 
     public float gravity = -9.81f;
 
@@ -35,15 +27,28 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 move;
 
-    private bool canMove = true;
+    public bool canMove = true;
     public bool isWalking = true;
     public bool isMoving = false;
 
-    [SerializeField] private Image reputationUI = null;
+    [Header("Sprinting Variables")]
+    public bool staminaFull = true;
+    public float maxStamina = 100f;
+    public float playerStamina = 100f;
 
+    [SerializeField, Range (0, 50)] private float staminaRegen = 0.5f;
+    [SerializeField, Range (0, 50)] private float staminaDrain = 0.5f;
+
+    [Header("Reputation Variables")]
+    public float maxReputation = 100f;
+    public float playerReputation = 70f;
+
+    [Header("UI")]
+    [SerializeField] private Image reputationUI = null;
     [SerializeField] private Image staminaProgressUI = null;
     [SerializeField] private CanvasGroup sliderCanvasGroup = null;
 
+    [Space(20)]
     public Flowchart flowchart;
     // public Flowchart flowchart2;
     // bool canInteract1 = false;
@@ -56,7 +61,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        canMove = flowchart.GetBooleanVariable("CanMove");
         playerReputation = flowchart.GetFloatVariable("Reputation");
 
         UpdateReputation();
@@ -127,6 +131,7 @@ public class PlayerController : MonoBehaviour
     {
         if (staminaFull)
         {
+            staminaProgressUI.color = new Vector4(255, 255, 255, 255);
             isWalking = false;
             speed = runSpeed;
             playerStamina -= staminaDrain * Time.deltaTime;
@@ -135,6 +140,7 @@ public class PlayerController : MonoBehaviour
             if (playerStamina <= 0.1)
             {
                 staminaFull = false;
+                staminaProgressUI.color = new Vector4(255, 0, 0, 255);
                 speed = 4f;
                 sliderCanvasGroup.alpha = 0;
             }

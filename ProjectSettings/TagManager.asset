@@ -9,6 +9,8 @@ TagManager:
   - Christian_NPC
   - Pagan_NPC
   - DesPoints
+  - Interactable Item
+
   layers:
   - Default
   - TransparentFX
