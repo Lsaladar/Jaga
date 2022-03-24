@@ -34,8 +34,8 @@ public class NPCNavMesh : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {       
         FunctionTimer.Create(DestSelect, Random.Range(10f, 20f));
-
         //Debug.Log("e");
+ 
     }
 
 }
