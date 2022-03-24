@@ -10,7 +10,6 @@ TagManager:
   - Pagan_NPC
   - DesPoints
   - Interactable Item
-
   layers:
   - Default
   - TransparentFX
@@ -18,11 +17,11 @@ TagManager:
   - 
   - Water
   - UI
+  - Environment
   - 
   - 
-  - PostProcessing
-  - Not in Reflection
-  - Ground
+  - 
+  - 
   - 
   - 
   - 

@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.unity.burst": {
+      "version": "1.6.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.cinemachine": {
       "version": "2.8.0",
       "depth": 0,
@@ -57,40 +66,50 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.render-pipelines.core": {
-      "version": "10.7.0",
+    "com.unity.mathematics": {
+      "version": "1.2.4",
       "depth": 1,
       "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.render-pipelines.core": {
+      "version": "12.1.1",
+      "depth": 1,
+      "source": "builtin",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.physics": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
+      }
     },
     "com.unity.render-pipelines.high-definition": {
-      "version": "10.7.0",
+      "version": "12.1.1",
       "depth": 0,
-      "source": "registry",
+      "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "10.7.0",
-        "com.unity.shadergraph": "10.7.0",
-        "com.unity.visualeffectgraph": "10.7.0",
-        "com.unity.render-pipelines.high-definition-config": "10.7.0"
-      },
-      "url": "https://packages.unity.com"
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.burst": "1.5.0",
+        "com.unity.modules.video": "1.0.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.terrain": "1.0.0",
+        "com.unity.render-pipelines.core": "12.1.1",
+        "com.unity.shadergraph": "12.1.1",
+        "com.unity.visualeffectgraph": "12.1.1",
+        "com.unity.render-pipelines.high-definition-config": "12.1.1"
+      }
     },
     "com.unity.render-pipelines.high-definition-config": {
-      "version": "10.7.0",
+      "version": "12.1.1",
       "depth": 1,
-      "source": "registry",
+      "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "10.7.0"
-      },
-      "url": "https://packages.unity.com"
+        "com.unity.render-pipelines.core": "12.1.1"
+      }
     },
     "com.unity.searcher": {
-      "version": "4.3.2",
+      "version": "4.9.1",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
@@ -106,20 +125,22 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "10.7.0",
+      "version": "12.1.1",
       "depth": 1,
-      "source": "registry",
+      "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "10.7.0",
-        "com.unity.searcher": "4.3.2"
-      },
-      "url": "https://packages.unity.com"
+        "com.unity.render-pipelines.core": "12.1.1",
+        "com.unity.searcher": "4.9.1"
+      }
     },
     "com.unity.terrain-tools": {
-      "version": "3.0.2-preview.3",
+      "version": "4.0.3",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.modules.terrain": "1.0.0",
+        "com.unity.modules.terrainphysics": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
@@ -164,14 +185,13 @@
       }
     },
     "com.unity.visualeffectgraph": {
-      "version": "10.7.0",
+      "version": "12.1.1",
       "depth": 1,
-      "source": "registry",
+      "source": "builtin",
       "dependencies": {
-        "com.unity.shadergraph": "10.7.0",
-        "com.unity.render-pipelines.core": "10.7.0"
-      },
-      "url": "https://packages.unity.com"
+        "com.unity.shadergraph": "12.1.1",
+        "com.unity.render-pipelines.core": "12.1.1"
+      }
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
