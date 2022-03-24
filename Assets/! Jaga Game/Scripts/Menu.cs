@@ -4,9 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
 
 public class Menu : MonoBehaviour
 {
+    Resolution[] resolutions;
+    [Tooltip("Creates a list for the resolution used in the dropdown menu")] public TMPro.TMP_Dropdown resolutionDropdown;
+
+    public GameObject audioSource;
+
+    public AudioMixer mixer;
+
     public void StartGame()
     {
         SceneManager.LoadScene("Character Controller tests");
@@ -17,9 +25,6 @@ public class Menu : MonoBehaviour
         Application.Quit();
         Debug.Log("Game is now turned off");
     }
-
-    Resolution[] resolutions;
-    [Tooltip("Creates a list for the resolution used in the dropdown menu")] public TMPro.TMP_Dropdown resolutionDropdown;
 
     void Start()
     {
@@ -61,5 +66,22 @@ public class Menu : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetLevel(float slider)
+    {
+        mixer.SetFloat("MusicVolumeMixer", Mathf.Log10(slider) * 20);
+    }
+
+    public void OnBeingDrag()
+    {
+        audioSource.SetActive(true);
+        Debug.Log("You are dragging the slider");
+    }
+
+    public void OnEndDrag()
+    {
+        audioSource.SetActive(false);
+        Debug.Log("You are no longer dragging the slider");
     }
 }
