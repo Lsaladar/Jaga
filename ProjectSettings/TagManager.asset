@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Christian_NPC
   - Pagan_NPC
+  - DesPoints
   - Interactable Item
   layers:
   - Default
@@ -16,11 +17,11 @@ TagManager:
   - 
   - Water
   - UI
+  - Environment
+  - WNPC radius
   - 
   - 
-  - PostProcessing
-  - Not in Reflection
-  - Ground
+  - 
   - 
   - 
   - 
