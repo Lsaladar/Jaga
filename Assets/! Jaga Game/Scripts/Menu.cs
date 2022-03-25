@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
 {
