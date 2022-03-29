@@ -16,6 +16,9 @@ public class Menu : MonoBehaviour
 
     public AudioMixer mixer;
 
+    public GameObject pauseMenu;
+    [SerializeField] bool isGamePaused = false;
+
     public void StartGame()
     {
         SceneManager.LoadScene("Character Controller tests");
@@ -53,6 +56,29 @@ public class Menu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
     }
 
+    void Update()
+    {
+        if (!isGamePaused)
+        {
+            //Debug.Log("Game is running");
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                PauseGame();
+                isGamePaused = true;
+            }
+        }
+
+        if (isGamePaused)
+        {
+            //Debug.Log("Game is no longer running");
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                ContinueGame();
+                isGamePaused = false;
+            }
+        }
+    }
+
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
@@ -74,15 +100,32 @@ public class Menu : MonoBehaviour
         mixer.SetFloat("MusicVolumeMixer", Mathf.Log10(slider) * 20);
     }
 
+    void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0.0f;
+    }
+
+    public void ContinueGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     //public void OnBeingDrag()
     //{
-        //audioSource.SetActive(true);
-        //Debug.Log("You are dragging the slider");
+    //audioSource.SetActive(true);
+    //Debug.Log("You are dragging the slider");
     //}
 
     //public void OnEndDrag()
     //{
-        //audioSource.SetActive(false);
-        //Debug.Log("You are no longer dragging the slider");
+    //audioSource.SetActive(false);
+    //Debug.Log("You are no longer dragging the slider");
     //}
 }
