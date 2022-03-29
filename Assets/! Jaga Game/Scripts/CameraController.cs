@@ -10,9 +10,16 @@ public class CameraController : MonoBehaviour
 
     float rotation = 0f;
 
+    public GameObject interactionUI;
+
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private HeadBobController headBobController;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        playerController = GetComponentInParent<PlayerController>();
+        headBobController = GetComponentInParent<HeadBobController>();
     }
 
     void Update()
@@ -27,15 +34,21 @@ public class CameraController : MonoBehaviour
         player.Rotate(Vector3.up * mouseX);
     }
 
-    void FreezeTime()
+    public void FreezeTime()
     {
         cameraSpeed = 0f;
         Cursor.lockState = CursorLockMode.None;
+        playerController.canMove = false;
+        headBobController._enable = false;
+        interactionUI.SetActive(false);
     }
 
-    void UnFreezeTime()
+    public void UnFreezeTime()
     {
         cameraSpeed = 500f;
         Cursor.lockState = CursorLockMode.Locked;
+        playerController.canMove = true;
+        headBobController._enable = true;
+        interactionUI.SetActive(true);
     }
 }
