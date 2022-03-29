@@ -74,15 +74,15 @@ public class Menu : MonoBehaviour
         mixer.SetFloat("MusicVolumeMixer", Mathf.Log10(slider) * 20);
     }
 
-    public void OnBeingDrag()
-    {
-        audioSource.SetActive(true);
-        Debug.Log("You are dragging the slider");
-    }
+    //public void OnBeingDrag()
+    //{
+        //audioSource.SetActive(true);
+        //Debug.Log("You are dragging the slider");
+    //}
 
-    public void OnEndDrag()
-    {
-        audioSource.SetActive(false);
-        Debug.Log("You are no longer dragging the slider");
-    }
+    //public void OnEndDrag()
+    //{
+        //audioSource.SetActive(false);
+        //Debug.Log("You are no longer dragging the slider");
+    //}
 }
