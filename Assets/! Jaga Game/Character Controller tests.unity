@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2033.7124, g: 1306.6787, b: 982.4785, a: 1}
+  m_IndirectSpecularColor: {r: 2033.9497, g: 1306.8652, b: 982.7461, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 553511464}
   - component: {fileID: 553511463}
   - component: {fileID: 553511462}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
