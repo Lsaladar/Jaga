@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 162.49335, g: 165.375, b: 231.60913, a: 1}
+  m_IndirectSpecularColor: {r: 162.69135, g: 166.05957, b: 233.53369, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -577,7 +577,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2575597090644856516, guid: 1c7ef47ad37a0024d9e3a43f1286de9e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2575597090644856516, guid: 1c7ef47ad37a0024d9e3a43f1286de9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -779,12 +779,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136931953}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141225376
 GameObject:
@@ -1000,7 +1000,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &273638992
 MonoBehaviour:
@@ -1468,6 +1468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00fec952e84d1e4e825c1515bb40472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &511128401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00fec952e84d1e4e825c1515bb40472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &538816103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00fec952e84d1e4e825c1515bb40472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &553511461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,7 +1773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -338.6, y: -52.827, z: -26.386}
 --- !u!114 &581840663
 MonoBehaviour:
@@ -1901,6 +1904,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7498471296723570314, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: interactionUI
+      value: 
+      objectReference: {fileID: 2052803402}
+    - target: {fileID: 7498471296723570314, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: interactionText
+      value: 
+      objectReference: {fileID: 903828989}
     - target: {fileID: 7498471296723570318, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2180,7 +2191,7 @@ RectTransform:
   - {fileID: 2002404374}
   - {fileID: 2052803403}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2936,6 +2947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00fec952e84d1e4e825c1515bb40472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &903828987
 GameObject:
   m_ObjectHideFlags: 0
@@ -5545,6 +5557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00fec952e84d1e4e825c1515bb40472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &1235753354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5697,6 +5710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00fec952e84d1e4e825c1515bb40472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &1275156521
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,6 +6228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00fec952e84d1e4e825c1515bb40472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &1337339464
 GameObject:
   m_ObjectHideFlags: 0
@@ -6509,6 +6524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00fec952e84d1e4e825c1515bb40472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contact: 0
 --- !u!1 &1515378474
 GameObject:
   m_ObjectHideFlags: 0

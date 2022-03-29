@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NPCLook : MonoBehaviour
 {
-    
+    public bool contact;
+
     void OnTriggerEnter (Collider other) 
     {
         if (other.gameObject.tag == "NINPC")
@@ -12,6 +13,9 @@ public class NPCLook : MonoBehaviour
             transform.LookAt(other.gameObject.transform);
         }
 
+        bool contact = true;
+
+        Debug.Log(contact);
         
     }
 
