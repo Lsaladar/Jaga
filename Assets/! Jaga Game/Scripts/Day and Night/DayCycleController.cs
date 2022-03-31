@@ -20,7 +20,7 @@ public class DayCycleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        skyVolume.profile.TryGet<PhysicallyBasedSky>(out sky);
+        skyVolume.profile.TryGet(out sky);
     }
 
     // Update is called once per frame
@@ -37,6 +37,7 @@ public class DayCycleController : MonoBehaviour
 
     private void OnValidate()
     {
+        skyVolume.profile.TryGet(out sky);
         UpdateTime();
     }
 
@@ -49,9 +50,9 @@ public class DayCycleController : MonoBehaviour
         sun.transform.rotation = Quaternion.Euler(sunRotation, 0, 0);
         moon.transform.rotation = Quaternion.Euler(moonRotation, 0, 0);
 
-        //sky.spaceRotation = new Vector3Parameter(, false);
+        sky.spaceRotation = new Vector3Parameter(moon.transform.rotation.eulerAngles, false);
 
-        sky.spaceEmissionMultiplier.value = starCurve.Evaluate(alpha) * 1000.0f;
+        sky.spaceEmissionMultiplier.value = starCurve.Evaluate(alpha) * 50.0f;
 
 
 
