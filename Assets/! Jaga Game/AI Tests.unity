@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 162.69135, g: 166.05957, b: 233.53369, a: 1}
+  m_IndirectSpecularColor: {r: 162.69818, g: 166.07434, b: 233.57568, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1912,6 +1912,22 @@ PrefabInstance:
       propertyPath: interactionText
       value: 
       objectReference: {fileID: 903828989}
+    - target: {fileID: 7498471296723570317, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 1152563300}
+    - target: {fileID: 7498471296723570317, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: reputationUI
+      value: 
+      objectReference: {fileID: 1147302086}
+    - target: {fileID: 7498471296723570317, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: sliderCanvasGroup
+      value: 
+      objectReference: {fileID: 2002404375}
+    - target: {fileID: 7498471296723570317, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: staminaProgressUI
+      value: 
+      objectReference: {fileID: 1961558420}
     - target: {fileID: 7498471296723570318, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
       propertyPath: m_RootOrder
       value: 7
