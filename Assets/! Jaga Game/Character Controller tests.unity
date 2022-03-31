@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1576.9185, g: 1337.3936, b: 1482.7227, a: 1}
+  m_IndirectSpecularColor: {r: 1576.9165, g: 1337.3857, b: 1482.7031, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1716,10 +1716,10 @@ RectTransform:
   m_Father: {fileID: 2052803403}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 138.705, y: -25}
+  m_SizeDelta: {x: 147.41, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &903828989
 MonoBehaviour:
@@ -2017,10 +2017,10 @@ RectTransform:
   m_Father: {fileID: 2052803403}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30, y: -25}
+  m_SizeDelta: {x: 50, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115908919
 MonoBehaviour:
@@ -3403,7 +3403,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_SizeDelta: {x: 217.41, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2052803404
 MonoBehaviour:
@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeOfDay: 13.2
-  orbitSpeed: 1
+  orbitSpeed: 0.5
   sun: {fileID: 581840661}
   moon: {fileID: 309844122}
   skyVolume: {fileID: 701018380}
