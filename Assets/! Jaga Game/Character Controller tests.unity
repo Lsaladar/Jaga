@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 74.75012, g: 56.046448, b: 51.113525, a: 1}
+  m_IndirectSpecularColor: {r: 1576.9185, g: 1337.3936, b: 1482.7227, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -860,7 +860,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309844121}
-  m_LocalRotation: {x: -0.65934587, y: 0, z: 0, w: 0.75183976}
+  m_LocalRotation: {x: -0.58778524, y: 0, z: 0, w: 0.809017}
   m_LocalPosition: {x: 10.7, y: 17.4, z: -15.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -992,8 +992,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 2000
+  m_Color: {r: 0.86721253, g: 0.9056604, b: 0.9052761, a: 1}
+  m_Intensity: 50182.727
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1036,7 +1036,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 9410
+  m_ColorTemperature: 7926
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -1050,7 +1050,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581840660}
-  m_LocalRotation: {x: 0.75183976, y: 0, z: 0, w: 0.65934587}
+  m_LocalRotation: {x: 0.80901706, y: 0, z: 0, w: 0.5877852}
   m_LocalPosition: {x: 10.7, y: 17.4, z: -15.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 2000
+  m_Intensity: 50182.727
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_UseScreenSpaceShadows: 0
   m_InteractsWithSky: 1
   m_AngularDiameter: 0.5
-  m_FlareSize: 2
+  m_FlareSize: 1
   m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
   m_SurfaceTexture: {fileID: 0}
@@ -3557,7 +3557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9bb10d0f094af4bbc6abb86734e657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOfDay: 12.5
+  timeOfDay: 13.2
   orbitSpeed: 1
   sun: {fileID: 581840661}
   moon: {fileID: 309844122}
