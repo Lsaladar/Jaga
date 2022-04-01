@@ -29,11 +29,6 @@ public class YAGAAI : MonoBehaviour
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
-    
-    private void Patroling()
-    {
-        if (!walkPointSet) SearchWalkPoint()
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -42,8 +37,50 @@ public class YAGAAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        playerInSightRange = 
+        //Check for sight and attack range
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+        if (!playerInSightRange && !playerInAttackRange) Patroling();
+        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+        if (playerInSightRange && playerInAttackRange) AttackPlayer();
+    }
+
+    private void Patroling()
+    {
+        if (!walkPointSet) SearchWalkPoint();
+
+        if (walkPointSet)
+        {
+            agent.SetDestination(walkpoint);
+        }
+
+        Vector3 distancetoWalkPoint = transform.position - walkPoint;
+    }
+    private void SearchWalkPoint()
+    {
+        //Calculate random point in range
+        float randomZ = Random.range(-walkPointRange, walkPointRange);
+        float randomX = Random.range(-walkPointRange, walkPointRange);
+
+        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+
+        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
+        {
+            walkPointSet = true;
+        }
+
+    }
+
+    private void ChasePlayer()
+    {
+        
+    }
+
+    private void AttackPlayer()
+    {
+        
     }
 }
