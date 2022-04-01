@@ -45,7 +45,7 @@ public class YAGAAI : MonoBehaviour
 
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        //if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
     private void Patroling()
@@ -54,16 +54,22 @@ public class YAGAAI : MonoBehaviour
 
         if (walkPointSet)
         {
-            agent.SetDestination(walkpoint);
+            agent.SetDestination(walkPoint);
         }
 
         Vector3 distancetoWalkPoint = transform.position - walkPoint;
+
+        //Walkpoint reached
+        if (distancetoWalkPoint.magnitude < 1f)
+        {
+            walkPointSet = false;
+        }
     }
     private void SearchWalkPoint()
     {
         //Calculate random point in range
-        float randomZ = Random.range(-walkPointRange, walkPointRange);
-        float randomX = Random.range(-walkPointRange, walkPointRange);
+        float randomZ = Random.Range(-walkPointRange, walkPointRange);
+        float randomX = Random.Range(-walkPointRange, walkPointRange);
 
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
@@ -76,7 +82,7 @@ public class YAGAAI : MonoBehaviour
 
     private void ChasePlayer()
     {
-        
+        agent.SetDestination(player.position);
     }
 
     private void AttackPlayer()

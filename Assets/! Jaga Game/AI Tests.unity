@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 162.69818, g: 166.07434, b: 233.57568, a: 1}
+  m_IndirectSpecularColor: {r: 162.8136, g: 166.64172, b: 235.43164, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,9 +135,9 @@ GameObject:
   - component: {fileID: 1876305}
   - component: {fileID: 1876304}
   - component: {fileID: 1876303}
-  - component: {fileID: 1876302}
   - component: {fileID: 1876301}
   - component: {fileID: 1876300}
+  - component: {fileID: 1876302}
   m_Layer: 0
   m_Name: BY
   m_TagString: Untagged
@@ -192,22 +192,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1876299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8997d53d0f289674fb238df5099dba9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 87ffe2086a92a034ca9938a356af8ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  des:
-  - {fileID: 1772775716}
-  - {fileID: 299428724}
-  - {fileID: 295157590}
-  - {fileID: 293021624}
-  - {fileID: 62466767}
-  - {fileID: 1069359658}
-  - {fileID: 1636237130}
-  - {fileID: 1828342319}
-  - {fileID: 1114315947}
-  - {fileID: 835604951}
-  atDes: 0
-  rand: 0
+  agent: {fileID: 1876301}
+  player: {fileID: 941277694}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  timeBetweenAttacks: 0
+  sightRange: 0
+  attackRange: 0
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!136 &1876303
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1904,6 +1906,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7498471294853114088, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498471295099181956, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498471295520137349, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498471296213261956, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7498471296723570314, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
       propertyPath: interactionUI
       value: 
@@ -1975,6 +1993,10 @@ PrefabInstance:
     - target: {fileID: 7498471296723570418, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498471296723570418, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
@@ -3213,6 +3235,11 @@ MonoBehaviour:
   itemInspect: {fileID: 0}
   inspectionDistance: {fileID: 0}
   item: {fileID: 0}
+--- !u!4 &941277694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7498471296723570318, guid: c0e75bea21bb0e94195e23dfe6a6a82f, type: 3}
+  m_PrefabInstance: {fileID: 608450336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1069359658
 GameObject:
   m_ObjectHideFlags: 0
