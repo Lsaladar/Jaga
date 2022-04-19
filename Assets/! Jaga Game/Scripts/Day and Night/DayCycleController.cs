@@ -6,6 +6,7 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class DayCycleController : MonoBehaviour
 {
+    public bool isEnabled = true;
     [Range(0, 24)] public float timeOfDay;
 
     public float orbitSpeed = 1.0f;
@@ -26,13 +27,17 @@ public class DayCycleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeOfDay += Time.deltaTime * orbitSpeed;
-        if(timeOfDay > 24)
+        if (isEnabled)
         {
-            timeOfDay = 0;
-        }
+            timeOfDay += Time.deltaTime * orbitSpeed;
+            if (timeOfDay > 24)
+            {
+                timeOfDay = 0;
+            }
 
-        UpdateTime();
+            UpdateTime();
+        }
+        
     }
 
     private void OnValidate()
