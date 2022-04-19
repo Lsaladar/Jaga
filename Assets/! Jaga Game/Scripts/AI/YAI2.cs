@@ -1,22 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class YAI2 : MonoBehaviour
+[RequireComponent(typeof(Rigidbody))]
+public class NPCNavMesh : MonoBehaviour
 {
-    public GameObject Player;
-    public float MoveSpeed;
-    public float MinDist;
-    
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject[] des;
+    [SerializeField] private bool atDes;
+    [SerializeField] private int rand;
+    [SerializeField] private bool isStalking;
+
+    private NavMeshAgent navMeshAgent;
+
+    private void Awake()
     {
-        
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void DestSelect()
     {
-        transform.LookAt(Player);
+        int rand = Random.Range(0, 9);
+
+        navMeshAgent.destination = des[rand].transform.position;
+
+        Debug.Log(rand);
     }
+
+    private void Start()
+    {
+        DestSelect();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
+        //Debug.Log("e");
+
+    }
+
 }
