@@ -54,6 +54,15 @@ public class PlayerController : MonoBehaviour
     // bool canInteract1 = false;
     // bool canInteract2 = false;
 
+    Inventory inventory;
+    [SerializeField] UI_Inventory uiInventory; 
+
+    void Awake()
+    {
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+    }
+
     void Start()
     {
         sliderCanvasGroup.alpha = 0;
