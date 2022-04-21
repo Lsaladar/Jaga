@@ -44,7 +44,6 @@ public class PlayerController : MonoBehaviour
     public float playerReputation = 70f;
 
     [Header("UI")]
-    [SerializeField] private Image reputationUI = null;
     [SerializeField] private Image staminaProgressUI = null;
     [SerializeField] private CanvasGroup sliderCanvasGroup = null;
 
@@ -62,8 +61,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         playerReputation = flowchart.GetFloatVariable("Reputation");
-
-        UpdateReputation();
 
         if(canMove)
         {
@@ -159,10 +156,5 @@ public class PlayerController : MonoBehaviour
         {
             sliderCanvasGroup.alpha = 1;
         }
-    }
-
-    void UpdateReputation()
-    {
-        reputationUI.fillAmount = playerReputation / maxReputation;
     }
 }
