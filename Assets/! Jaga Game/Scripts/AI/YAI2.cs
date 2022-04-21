@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
-public class NPCNavMesh : MonoBehaviour
+public class YAI2 : MonoBehaviour
 {
     [SerializeField] private GameObject[] des;
+    [SerializeField] private GameObject playerDes;
     [SerializeField] private bool atDes;
     [SerializeField] private int rand;
     [SerializeField] private bool isStalking;
@@ -25,6 +26,11 @@ public class NPCNavMesh : MonoBehaviour
         navMeshAgent.destination = des[rand].transform.position;
 
         Debug.Log(rand);
+    }
+
+    private void ChasePlayer()
+    {
+        navMeshAgent.destination = playerDes.transform.position;
     }
 
     private void Start()

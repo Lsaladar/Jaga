@@ -163,6 +163,6 @@ public class PlayerController : MonoBehaviour
 
     void UpdateReputation()
     {
-       reputationUI.fillAmount = playerReputation / maxReputation;
+        reputationUI.fillAmount = playerReputation / maxReputation;
     }
 }

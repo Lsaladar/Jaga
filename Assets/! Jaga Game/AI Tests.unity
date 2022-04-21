@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 162.8136, g: 166.64172, b: 235.43164, a: 1}
+  m_IndirectSpecularColor: {r: 162.71326, g: 166.20215, b: 234.05884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 91627496}
   m_Layer: 0
   m_Name: WNPC (6)
-  m_TagString: Untagged
+  m_TagString: WNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,6 +492,7 @@ MonoBehaviour:
   - {fileID: 835604951}
   atDes: 0
   rand: 0
+  npcLook: {fileID: 0}
 --- !u!136 &91627499
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1267,7 +1268,7 @@ GameObject:
   - component: {fileID: 364152930}
   m_Layer: 0
   m_Name: WNPC (4)
-  m_TagString: Untagged
+  m_TagString: WNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1335,6 +1336,7 @@ MonoBehaviour:
   - {fileID: 835604951}
   atDes: 0
   rand: 0
+  npcLook: {fileID: 0}
 --- !u!136 &364152933
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2480,7 +2482,7 @@ GameObject:
   - component: {fileID: 810458609}
   m_Layer: 0
   m_Name: WNPC (5)
-  m_TagString: Untagged
+  m_TagString: WNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2548,6 +2550,7 @@ MonoBehaviour:
   - {fileID: 835604951}
   atDes: 0
   rand: 0
+  npcLook: {fileID: 0}
 --- !u!136 &810458612
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2782,7 +2785,7 @@ GameObject:
   - component: {fileID: 872087556}
   m_Layer: 0
   m_Name: WNPC (3)
-  m_TagString: Untagged
+  m_TagString: WNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2850,6 +2853,7 @@ MonoBehaviour:
   - {fileID: 835604951}
   atDes: 0
   rand: 0
+  npcLook: {fileID: 0}
 --- !u!136 &872087559
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5771,7 +5775,7 @@ GameObject:
   - component: {fileID: 1275156522}
   m_Layer: 0
   m_Name: WNPC (2)
-  m_TagString: Untagged
+  m_TagString: WNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5839,6 +5843,7 @@ MonoBehaviour:
   - {fileID: 835604951}
   atDes: 0
   rand: 0
+  npcLook: {fileID: 0}
 --- !u!136 &1275156525
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5934,7 +5939,7 @@ GameObject:
   - component: {fileID: 1281276922}
   m_Layer: 0
   m_Name: WNPC (1)
-  m_TagString: Untagged
+  m_TagString: WNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6002,6 +6007,7 @@ MonoBehaviour:
   - {fileID: 835604951}
   atDes: 0
   rand: 0
+  npcLook: {fileID: 0}
 --- !u!136 &1281276925
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6364,7 +6370,7 @@ GameObject:
   - component: {fileID: 1353406189}
   m_Layer: 0
   m_Name: WNPC
-  m_TagString: Untagged
+  m_TagString: WNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6394,6 +6400,7 @@ MonoBehaviour:
   - {fileID: 835604951}
   atDes: 0
   rand: 0
+  npcLook: {fileID: 0}
 --- !u!136 &1353406184
 CapsuleCollider:
   m_ObjectHideFlags: 0
