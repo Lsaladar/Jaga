@@ -15,8 +15,16 @@ public class NPCLook : MonoBehaviour
 
         bool contact = true;
 
-        Debug.Log(contact);
+        //Debug.Log("c");
         
+    }
+
+    private void Update() 
+    {
+        if (contact)
+        {
+            Debug.Log("c");
+        }
     }
 
 }
