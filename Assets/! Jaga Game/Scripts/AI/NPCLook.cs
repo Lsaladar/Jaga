@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class NPCLook : MonoBehaviour
 {
-    public bool contact;
+    public bool contact = false;
+
+    private NPCNavMesh npcNavMesh;
+
+    void Start()
+    {
+        npcNavMesh = gameObject.GetComponent<NPCNavMesh>();
+
+        //contact = npcNavMesh.hasContact;
+    }
 
     void OnTriggerEnter (Collider other) 
     {
-        if (other.gameObject.tag == "NINPC")
-        {
-            transform.LookAt(other.gameObject.transform);
-        }
+        
+        
+        transform.LookAt(other.gameObject.transform);
+        
 
         bool contact = true;
 
-        //Debug.Log("c");
+        //Debug.Log(contact);
         
     }
 
@@ -23,7 +32,7 @@ public class NPCLook : MonoBehaviour
     {
         if (contact)
         {
-            Debug.Log("c");
+            //Debug.Log("c");
         }
     }
 

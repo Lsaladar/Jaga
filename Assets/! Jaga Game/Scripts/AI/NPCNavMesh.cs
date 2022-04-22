@@ -10,7 +10,9 @@ public class NPCNavMesh : MonoBehaviour
     [SerializeField] private bool atDes;
     [SerializeField] private int rand;
     
-    [SerializeField] private NPCLook npcLook;
+    public bool hasContact; 
+
+    //private NPCLook npcLook;
 
     //public bool isStopped;
 
@@ -33,11 +35,20 @@ public class NPCNavMesh : MonoBehaviour
     private void Start()
     {
         DestSelect();   
+
+        //npcLook = GetComponent<NPCLook>();
     }
 
     private void Update() 
     {
-        //Debug.Log(npcLook.contact);
+        Debug.Log(hasContact);
+
+        if (hasContact == true)
+        {
+            FunctionTimer.Create(WNpcsInteracting, Random.Range(5f, 10f));
+            FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
+            Debug.Log("ww");
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -48,12 +59,7 @@ public class NPCNavMesh : MonoBehaviour
             //Debug.Log("e");
         }
 
-        if (npcLook.contact == true)
-        {
-            FunctionTimer.Create(WNpcsInteracting, Random.Range(5f, 10f));
-            FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
-            Debug.Log("ww");
-        }
+        
 
     }
 
