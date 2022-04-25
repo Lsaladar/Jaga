@@ -61,6 +61,9 @@ public class PlayerController : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+
+        ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item { itemType = Item.ItemType.SmallCube, amount = 1 });
+        ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item { itemType = Item.ItemType.LargeCube, amount = 1 });
     }
 
     void Start()
@@ -173,5 +176,15 @@ public class PlayerController : MonoBehaviour
     void UpdateReputation()
     {
         reputationUI.fillAmount = playerReputation / maxReputation;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        ItemWolrd itemWolrd = collider.GetComponent<ItemWorld>();
+        if(itemWolrd != null)
+        {
+            inventory.AddItem(itemWolrd.GetItem());
+            itemWolrd.DestroySelf();
+        }
     }
 }
