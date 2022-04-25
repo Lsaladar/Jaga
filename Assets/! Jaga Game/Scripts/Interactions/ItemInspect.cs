@@ -30,6 +30,7 @@ public class ItemInspect : MonoBehaviour
         volume.profile.TryGet(out blur);
         lastPos = Input.mousePosition;
         inspectionUI.SetActive(false);
+        blur.active = false;
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class ItemInspect : MonoBehaviour
         {
             cam.FreezeTime();
             inspectionUI.SetActive(true);
-            blur.FocusMode = true;
+            blur.active = true;
 
             if (Input.GetMouseButton(0))
             {
@@ -51,7 +52,7 @@ public class ItemInspect : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                blur.FocusMode = false;
+                blur.active = false;
                 isInspecting = false;
                 cam.UnFreezeTime();
                 inspectionUI.SetActive(false);

@@ -42,4 +42,9 @@ public class AllInteractions : MonoBehaviour, IInteractable
         itemInspect.isInspecting = true;
         item.position = inspectionDistance.position;
     }
+
+    public void ItemZoom()
+    {
+
+    }
 }

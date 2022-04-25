@@ -10,6 +10,7 @@ TagManager:
   - Pagan_NPC
   - DesPoints
   - Interactable Item
+  - Zoom Item
   layers:
   - Default
   - TransparentFX

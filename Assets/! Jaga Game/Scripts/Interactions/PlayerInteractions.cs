@@ -54,6 +54,10 @@ public class PlayerInteractions : MonoBehaviour
                     {
                         interactable.ItemInteract();
                     }
+                    else if(hit.collider.tag == "Zoom Item")
+                    {
+                        interactable.ItemZoom();   
+                    }
                     
                 }
             }
