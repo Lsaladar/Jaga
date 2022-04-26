@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 9.606703, g: 8.672668, b: 12.160187, a: 1}
+  m_IndirectSpecularColor: {r: 9.627083, g: 8.669594, b: 12.083145, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172049430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.33, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 782799865}
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37c57d05f5f83be46b25f67a3d185835, type: 3}
-  m_Color: {r: 0.90588236, g: 0.6039216, b: 0.14509805, a: 1}
+  m_Color: {r: 1, g: 0.91314757, b: 0.627451, a: 0.64705884}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -413,6 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 782799865}
   - component: {fileID: 782799866}
+  - component: {fileID: 782799867}
   m_Layer: 0
   m_Name: Flame
   m_TagString: Untagged
@@ -429,7 +430,7 @@ Transform:
   m_GameObject: {fileID: 782799864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.00000017881, y: 0.17, z: 0}
-  m_LocalScale: {x: 0.033671502, y: 0.033671502, z: 0.033671502}
+  m_LocalScale: {x: 0.033671502, y: 0.033671502, z: 0.0336715}
   m_Children:
   - {fileID: 172049431}
   m_Father: {fileID: 1538252879}
@@ -476,7 +477,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 474691917b2bafb4aafede47523bc4f1, type: 3}
-  m_Color: {r: 1, g: 0.9647059, b: 0.7372549, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.70980394}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -486,6 +487,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &782799867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782799864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c87ac493e62554884e397c95a954be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1161221554
 GameObject:
   m_ObjectHideFlags: 0
