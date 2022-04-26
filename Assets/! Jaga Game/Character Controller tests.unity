@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1018.2766, g: 847.1958, b: 913.63086, a: 1}
+  m_IndirectSpecularColor: {r: 1017.93677, g: 846.853, b: 913.42773, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2437,7 +2437,7 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 1152563302}
+  - {fileID: 1152563372}
   selectedCommands: []
   variables:
   - {fileID: 1152563374}
@@ -2479,7 +2479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -690.7123
+    x: -689.7123
     y: -34.40738
     width: 190
     height: 40

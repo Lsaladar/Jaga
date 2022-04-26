@@ -22,11 +22,15 @@ public class ItemInspect : MonoBehaviour
 
     public Volume volume;
     private DepthOfField blur;
+
+    public PlayerInteractions playerInteractions;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerInteractions playerInteractions = GetComponent<PlayerInteractions>();
+
         volume.profile.TryGet(out blur);
         lastPos = Input.mousePosition;
         inspectionUI.SetActive(false);
@@ -40,6 +44,7 @@ public class ItemInspect : MonoBehaviour
         {
             cam.FreezeTime();
             inspectionUI.SetActive(true);
+            playerInteractions.isInspecting = true;
             blur.active = true;
 
             if (Input.GetMouseButton(0))
@@ -54,6 +59,7 @@ public class ItemInspect : MonoBehaviour
             {
                 blur.active = false;
                 isInspecting = false;
+                playerInteractions.isInspecting = false;
                 cam.UnFreezeTime();
                 inspectionUI.SetActive(false);
                 item.position = originalPos.position;

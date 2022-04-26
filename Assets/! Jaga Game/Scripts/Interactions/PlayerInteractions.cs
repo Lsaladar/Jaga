@@ -6,10 +6,12 @@ using TMPro;
 public class PlayerInteractions : MonoBehaviour
 {
     public Camera mainCam;
-    public float interactionDistance = 2f;
+    public float interactionDistance = 10f;
 
     public GameObject interactionUI;
     public TextMeshProUGUI interactionText;
+
+    public bool isInspecting = false;
 
     void Update()
     {
@@ -53,6 +55,7 @@ public class PlayerInteractions : MonoBehaviour
                     else if(hit.collider.tag == "Interactable Item")
                     {
                         interactable.ItemInteract();
+                        isInspecting = true;
                     }
                     else if(hit.collider.tag == "Zoom Item")
                     {
@@ -63,6 +66,10 @@ public class PlayerInteractions : MonoBehaviour
             }
         }
 
-        interactionUI.SetActive(hitSomething);
+        if (!isInspecting)
+        {
+            interactionUI.SetActive(hitSomething);
+        }
     }
+        
 }
