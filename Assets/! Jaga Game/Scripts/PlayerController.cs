@@ -54,21 +54,15 @@ public class PlayerController : MonoBehaviour
     // bool canInteract1 = false;
     // bool canInteract2 = false;
 
-    Inventory inventory;
-    [SerializeField] UI_Inventory uiInventory; 
-
-    void Awake()
-    {
-        inventory = new Inventory();
-        uiInventory.SetInventory(inventory);
-
-        ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item { itemType = Item.ItemType.SmallCube, amount = 1 });
-        ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Item { itemType = Item.ItemType.LargeCube, amount = 1 });
-    }
+    //Inventory inventory;
+    //[SerializeField] UI_Inventory uiInventory; 
 
     void Start()
     {
         sliderCanvasGroup.alpha = 0;
+
+        //inventory = new Inventory();
+        //uiInventory.SetInventory(inventory);
     }
 
     void Update()
@@ -178,13 +172,13 @@ public class PlayerController : MonoBehaviour
         reputationUI.fillAmount = playerReputation / maxReputation;
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        ItemWolrd itemWolrd = collider.GetComponent<ItemWorld>();
-        if(itemWolrd != null)
-        {
-            inventory.AddItem(itemWolrd.GetItem());
-            itemWolrd.DestroySelf();
-        }
-    }
+    //void OnTriggerEnter(Collider collider)
+    //{
+    //    ItemWolrd itemWolrd = collider.GetComponent<ItemWorld>();
+    //    if(itemWolrd != null)
+    //    {
+    //        inventory.AddItem(itemWolrd.GetItem());
+    //        itemWolrd.DestroySelf();
+    //    }
+    //}
 }

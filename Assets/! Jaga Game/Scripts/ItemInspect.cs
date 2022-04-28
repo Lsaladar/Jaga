@@ -15,12 +15,16 @@ public class ItemInspect : MonoBehaviour
 
     private Vector3 lastPos, currPos;
     public float rotationSpeed = -0.2f;
+
+    ItemPickUp itemPickUp;
     
 
     // Start is called before the first frame update
     void Start()
     {
         lastPos = Input.mousePosition;
+
+        itemPickUp = GetComponent<ItemPickUp>();
     }
 
     // Update is called once per frame
@@ -43,6 +47,11 @@ public class ItemInspect : MonoBehaviour
                 isInspecting = false;
                 cam.UnFreezeTime();
                 item.position = originalPos.position;
+            }
+
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                itemPickUp.PickUpItem();
             }
         }
     }
