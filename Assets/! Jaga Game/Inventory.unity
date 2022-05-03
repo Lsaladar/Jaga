@@ -1858,9 +1858,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items: []
-  slot: 1
-  iconImage:
-  - {fileID: 1164819592}
+  itemContent: {fileID: 590945483}
+  inventoryItem: {fileID: 922268347}
 --- !u!4 &160358003
 Transform:
   m_ObjectHideFlags: 0
@@ -6619,8 +6618,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 160358002}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: CancelInvoke
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: ListItems
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,60 +10,51 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
     public List<Item> Items = new List<Item>();
 
-    //public Transform itemContent;
-    //public GameObject inventoryItem;
+    public Transform itemContent;
+    public GameObject inventoryItem;
 
-    public int slot = 1;
-    public Image[] iconImage;
+    //public int slot = 1;
+    //public Image[] iconImage;
 
     void Awake()
     {
         Instance = this;
     }
 
-    public void AddSmallItem(Item item)
+    public void AddItem(Item item)
     {
         Items.Add(item);
-        UpdateInventory();
+        ListItems();
     }
 
-    public void AddMediumItem(Item item)
-    {
-        Items.Add(item);
-        UpdateInventory();
-    }
+    //public void AddMediumItem(Item item)
+    //{
+    //    Items.Add(item);
+    //    UpdateInventory();
+    //}
 
-    public void AddLargeItem(Item item)
-    {
-        Items.Add(item);
-        UpdateInventory();
-    }
+    //public void AddLargeItem(Item item)
+    //{
+    //    Items.Add(item);
+    //    UpdateInventory();
+    //}
 
     public void RemoveItem(Item item)
     {
         Items.Remove(item);
-        UpdateInventory();
+        ListItems();
     }
 
-    public void UpdateInventory()
+    public void ListItems()
     {
-        //switch (slot)
-        //{
-        //    case 1:
-        //        Debug.Log("Item added to slot 1");
-        //        iconImage[0].sprite = item.icon;
-        //        slot++;s
-        //        break;
-        //}
+        foreach(var item in Items)
+        {
+            GameObject obj = Instantiate(inventoryItem, itemContent);
+            var itemName = obj.transform.Find("itemName").GetComponent<Text>();
+            var itemIcon = obj.transform.Find("itemIcon").GetComponent<Image>();
 
-        ////foreach(var item in Items)
-        ////{
-        ////    //GameObject obj = Instantiate(inventoryItem, itemContent);
-        ////    //var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
-        ////    //var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
-
-        ////    //itemName.text = item.itemName;
-        ////    //itemIcon.sprite = item.icon;
-        ////}
+            itemName.text = item.itemName;
+            itemIcon.sprite = item.icon;
+        }
     }
 }
