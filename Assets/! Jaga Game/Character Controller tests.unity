@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1017.93677, g: 846.853, b: 913.42773, a: 1}
+  m_IndirectSpecularColor: {r: 1018.6968, g: 847.56836, b: 913.9336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1747,6 +1747,7 @@ MonoBehaviour:
   interactionDistance: 2
   interactionUI: {fileID: 2052803402}
   interactionText: {fileID: 903828989}
+  isInspecting: 0
 --- !u!1 &903828987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,6 +2131,7 @@ MonoBehaviour:
   itemInspect: {fileID: 0}
   inspectionDistance: {fileID: 0}
   item: {fileID: 0}
+  door: {fileID: 0}
 --- !u!1 &951398827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,12 +2156,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951398827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.114432, y: 0.052899957, z: 10.779414}
-  m_LocalScale: {x: 1.5254998, y: 2.4519, z: 0.17476644}
-  m_Children:
-  - {fileID: 1701313130}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_LocalPosition: {x: -0.4988527, y: -0.500469, z: -0.49208787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1701313130}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092653095
 GameObject:
@@ -3632,9 +3633,11 @@ GameObject:
   - component: {fileID: 1701313133}
   - component: {fileID: 1701313132}
   - component: {fileID: 1701313131}
+  - component: {fileID: 1701313135}
+  - component: {fileID: 1701313134}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3647,11 +3650,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701313129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4988527, y: 0.500469, z: 0.4920879}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 951398828}
-  m_RootOrder: 0
+  m_LocalPosition: {x: 9.875432, y: 1.28, z: 10.865415}
+  m_LocalScale: {x: 1.5254998, y: 2.4519, z: 0.17476644}
+  m_Children:
+  - {fileID: 951398828}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1701313131
 BoxCollider:
@@ -3715,6 +3719,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701313129}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1701313134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701313129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d0846f284d0a84b93f0a0da37c7c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  pivot: {fileID: 951398828}
+--- !u!114 &1701313135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701313129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252b2b2932da4a8449c74f4e30bf74d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 0}
+  characterName: NPC
+  itemName: Item
+  itemInspect: {fileID: 0}
+  inspectionDistance: {fileID: 0}
+  item: {fileID: 0}
+  door: {fileID: 1701313134}
 --- !u!1 &1727961162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3784,6 +3821,7 @@ MonoBehaviour:
   itemInspect: {fileID: 1849393020}
   inspectionDistance: {fileID: 1727961163}
   item: {fileID: 1849393024}
+  door: {fileID: 0}
 --- !u!114 &1849393020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3803,6 +3841,7 @@ MonoBehaviour:
   rotationSpeed: -10
   inspectionUI: {fileID: 1296481674}
   volume: {fileID: 701018380}
+  playerInteractions: {fileID: 0}
 --- !u!65 &1849393021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4094,6 +4133,7 @@ MonoBehaviour:
   itemInspect: {fileID: 0}
   inspectionDistance: {fileID: 0}
   item: {fileID: 0}
+  door: {fileID: 0}
 --- !u!136 &2013124231
 CapsuleCollider:
   m_ObjectHideFlags: 0

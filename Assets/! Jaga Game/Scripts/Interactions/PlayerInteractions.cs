@@ -41,8 +41,12 @@ public class PlayerInteractions : MonoBehaviour
                 {
                     interactionText.text = interactable.GetItemDescription();
                 }
-                
-                if(Input.GetKeyDown(KeyCode.E))
+                else if (hit.collider.tag == "Door")
+                {
+                    interactionText.text = "Open Door";
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     if(hit.collider.tag == "Christian_NPC")
                     {
@@ -61,7 +65,11 @@ public class PlayerInteractions : MonoBehaviour
                     {
                         interactable.ItemZoom();   
                     }
-                    
+                    else if (hit.collider.tag == "Door")
+                    {
+                        interactable.OpenDoor();
+                    }
+
                 }
             }
         }

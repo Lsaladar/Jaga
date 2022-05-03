@@ -17,6 +17,9 @@ public class AllInteractions : MonoBehaviour, IInteractable
     public Transform inspectionDistance;
     public Transform item;
 
+    [Header("Door Variables")]
+    public Door door;
+
     public string GetCharacterDescription()
     {
         return "Talk with " + characterName;
@@ -46,5 +49,10 @@ public class AllInteractions : MonoBehaviour, IInteractable
     public void ItemZoom()
     {
 
+    }
+
+    public void OpenDoor()
+    {
+        door.open = true;
     }
 }

@@ -8,6 +8,7 @@ public interface IInteractable
     void PaganInteract();
     void ItemInteract();
     void ItemZoom();
+    void OpenDoor();
     string GetCharacterDescription();
     string GetItemDescription();
 }
