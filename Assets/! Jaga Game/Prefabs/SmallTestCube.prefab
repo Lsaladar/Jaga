@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4498363217511573384}
   - component: {fileID: 2468452804714401092}
   m_Layer: 0
-  m_Name: TestCube
+  m_Name: SmallTestCube
   m_TagString: Interactable Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
