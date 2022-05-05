@@ -13,6 +13,7 @@ public class AllInteractions : MonoBehaviour, IInteractable
 
     [Header("Item Variables")]
     public ItemInspect itemInspect;
+    public InspectZoom itemZoom;
 
     public Transform inspectionDistance;
     public Transform item;
@@ -48,7 +49,7 @@ public class AllInteractions : MonoBehaviour, IInteractable
 
     public void ItemZoom()
     {
-
+        ItmeZoom.inspecting = true;
     }
 
     public void OpenDoor()
