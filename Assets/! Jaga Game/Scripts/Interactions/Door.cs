@@ -8,25 +8,50 @@ public class Door : MonoBehaviour
     public bool open = false;
     public Transform pivot;
 
-    private Transform ogRotation;
+    [Range(10, 100)] public int rotationSpeed;
+
+    public float duration = 10f;
+    private float openCounter = 0f;
+    private float closeCounter = 0f;
+    private float wait = 0f;
+
+    private Vector3 ogRotation;
 
     // Start is called before the first frame update
     void Start()
     {
-        ogRotation.rotation = gameObject.transform.rotation;
+        ogRotation = gameObject.transform.eulerAngles;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (open && gameObject.transform.rotation.y != 90)
+        if (!open)
         {
-            transform.RotateAround(pivot.position, Vector3.up, 30 * Time.deltaTime);
+            openCounter = 0f;
+            wait = 0f;
+            closeCounter = 0f;
         }
-        //else
-        //{
 
-        //}
+        if (open && openCounter <= duration)
+        {
+            openCounter += Time.deltaTime;
+            transform.RotateAround(pivot.position, Vector3.up, rotationSpeed * Time.deltaTime);
+        }
+        else if (openCounter >= duration && wait <= 3f)
+        {
+            wait += Time.deltaTime;
+        }
+        
+        if (wait >= 3f && closeCounter <= duration)
+        {
+            closeCounter += Time.deltaTime;
+            transform.RotateAround(pivot.position, Vector3.up, -rotationSpeed * Time.deltaTime);
+        }
+        else if (closeCounter >= duration)
+        {
+            open = false;
+        }
 
     }
 }
