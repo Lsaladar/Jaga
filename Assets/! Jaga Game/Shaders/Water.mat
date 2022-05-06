@@ -107,13 +107,13 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - Color_1e97200962c64b6bae733c2f3d38e580: {r: 0.14194772, g: 0.1981132, b: 0.07756318, a: 0}
+    - Color_1e97200962c64b6bae733c2f3d38e580: {r: 0.1563663, g: 0.1882353, b: 0.05098039, a: 0}
     - Color_be7ee5e5126b4472a6057aae0a5cfb01: {r: 0.14066386, g: 0.27358484, b: 0.15686277, a: 0}
     - Color_d7a643cd6549460f9ca82f828fa1f7ef: {r: 0.046502322, g: 0.1792453, b: 0.113912694, a: 0}
     - Color_e7b6a6597aa2414aae187e48ffc33162: {r: 0.34077498, g: 0.42452827, b: 0.27834636, a: 0}
-    - Vector2_ca3c1c1761a448029be443ca5c8b4a60: {r: 4.87, g: 0.6, b: 0.2, a: 0}
+    - Vector2_ca3c1c1761a448029be443ca5c8b4a60: {r: 1.7, g: 0.2, b: 0.2, a: 0}
     - Vector2_e7f03d8381304a9fadef779b4099455d: {r: 0.7, g: 0.7, b: 0, a: 0}
-    - Vector2_f3092eee4fcb4be2acec4a3559d4e95a: {r: 0.02, g: 0.02, b: 0.02, a: 0}
+    - Vector2_f3092eee4fcb4be2acec4a3559d4e95a: {r: 0.001, g: 0.001, b: 0.02, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
