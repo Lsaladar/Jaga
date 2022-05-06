@@ -11,6 +11,8 @@ TagManager:
   - DesPoints
   - Interactable Item
   - WNPC
+  - Zoom Item
+  - Door
   layers:
   - Default
   - TransparentFX
