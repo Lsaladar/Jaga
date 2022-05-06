@@ -6,10 +6,12 @@ using TMPro;
 public class PlayerInteractions : MonoBehaviour
 {
     public Camera mainCam;
-    public float interactionDistance = 2f;
+    public float interactionDistance = 10f;
 
     public GameObject interactionUI;
     public TextMeshProUGUI interactionText;
+
+    public bool isInspecting = false;
 
     void Update()
     {
@@ -39,8 +41,12 @@ public class PlayerInteractions : MonoBehaviour
                 {
                     interactionText.text = interactable.GetItemDescription();
                 }
-                
-                if(Input.GetKeyDown(KeyCode.E))
+                else if (hit.collider.tag == "Door")
+                {
+                    interactionText.text = "Open Door";
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     if(hit.collider.tag == "Christian_NPC")
                     {
@@ -53,12 +59,25 @@ public class PlayerInteractions : MonoBehaviour
                     else if(hit.collider.tag == "Interactable Item")
                     {
                         interactable.ItemInteract();
+                        isInspecting = true;
                     }
-                    
+                    else if(hit.collider.tag == "Zoom Item")
+                    {
+                        interactable.ItemZoom();   
+                    }
+                    else if (hit.collider.tag == "Door")
+                    {
+                        interactable.OpenDoor();
+                    }
+
                 }
             }
         }
 
-        interactionUI.SetActive(hitSomething);
+        if (!isInspecting)
+        {
+            interactionUI.SetActive(hitSomething);
+        }
     }
+        
 }

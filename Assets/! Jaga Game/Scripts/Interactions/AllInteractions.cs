@@ -13,9 +13,13 @@ public class AllInteractions : MonoBehaviour, IInteractable
 
     [Header("Item Variables")]
     public ItemInspect itemInspect;
+    //public InspectZoom itemZoom;
 
     public Transform inspectionDistance;
     public Transform item;
+
+    [Header("Door Variables")]
+    public Door door;
 
     public string GetCharacterDescription()
     {
@@ -41,5 +45,15 @@ public class AllInteractions : MonoBehaviour, IInteractable
     {
         itemInspect.isInspecting = true;
         item.position = inspectionDistance.position;
+    }
+
+    public void ItemZoom()
+    {
+        //ItemZoom.inspecting = true;
+    }
+
+    public void OpenDoor()
+    {
+        door.open = true;
     }
 }

@@ -10,6 +10,8 @@ TagManager:
   - Pagan_NPC
   - DesPoints
   - Interactable Item
+  - Zoom Item
+  - Door
   layers:
   - Default
   - TransparentFX
