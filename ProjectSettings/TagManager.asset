@@ -10,16 +10,19 @@ TagManager:
   - Pagan_NPC
   - DesPoints
   - Interactable Item
+  - WNPC
+  - Zoom Item
+  - Door
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Environment
   - WNPC radius
-  - 
+  - Ground
   - 
   - 
   - 

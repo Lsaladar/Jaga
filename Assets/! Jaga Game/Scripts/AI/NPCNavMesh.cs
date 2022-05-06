@@ -9,6 +9,12 @@ public class NPCNavMesh : MonoBehaviour
     [SerializeField] private GameObject[] des;
     [SerializeField] private bool atDes;
     [SerializeField] private int rand;
+    
+    public bool hasContact; 
+
+    //private NPCLook npcLook;
+
+    //public bool isStopped;
 
     private NavMeshAgent navMeshAgent;
 
@@ -23,19 +29,45 @@ public class NPCNavMesh : MonoBehaviour
 
         navMeshAgent.destination = des[rand].transform.position;
 
-        Debug.Log(rand);
+        //Debug.Log(rand);
     }
 
     private void Start()
     {
         DestSelect();   
+
+        //npcLook = GetComponent<NPCLook>();
+    }
+
+    private void Update() 
+    {
+        Debug.Log(hasContact);
+
+        if (hasContact == true)
+        {
+            FunctionTimer.Create(WNpcsInteracting, Random.Range(5f, 10f));
+            FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
+            Debug.Log("ww");
+        }
     }
 
     void OnTriggerEnter(Collider other)
-    {       
-        FunctionTimer.Create(DestSelect, Random.Range(10f, 20f));
-        //Debug.Log("e");
- 
+    {
+        if (other.tag == "DesPoints")
+        {
+            FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
+            //Debug.Log("e");
+        }
+
+        
+
+    }
+
+    private void WNpcsInteracting()
+    {
+        navMeshAgent.Stop(true);
+        //bool isStopped = true;
+        Debug.Log("s");
     }
 
 }
