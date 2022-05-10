@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 598.1073, g: 435.75537, b: 433.68066, a: 1}
+  m_IndirectSpecularColor: {r: 613.8916, g: 442.25195, b: 420.65723, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5980,7 +5980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4da5a50488c3ca54a8e0ed9425e5a03d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.4
+      value: -40.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4da5a50488c3ca54a8e0ed9425e5a03d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5988,7 +5988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4da5a50488c3ca54a8e0ed9425e5a03d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 209.2
+      value: 215.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4da5a50488c3ca54a8e0ed9425e5a03d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8228,7 +8228,7 @@ GameObject:
   - component: {fileID: 1331684864}
   - component: {fileID: 1331684863}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: Christian NPC
   m_TagString: Christian_NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8328,7 +8328,7 @@ Transform:
   m_LocalScale: {x: 2.2195299, y: 2.219529, z: 2.2195299}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375878600
 GameObject:
@@ -10068,6 +10068,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663624338}
   m_CullTransparentMesh: 1
+--- !u!1001 &1683080749
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1685016364}
+    m_Modifications:
+    - target: {fileID: 5341673266052067914, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_Name
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12.483263
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30.303986
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 705.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7835962
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 585.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9551681
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.29606405
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -34.443
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+--- !u!4 &1683080750 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5341673266052067919, guid: 6ee9c6acee6776f468112417033274c9, type: 3}
+  m_PrefabInstance: {fileID: 1683080749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1685016363
 GameObject:
   m_ObjectHideFlags: 0
@@ -10100,8 +10170,9 @@ Transform:
   - {fileID: 542745260}
   - {fileID: 2044209774}
   - {fileID: 1610092238}
+  - {fileID: 1683080750}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1695507983
 GameObject:
@@ -12363,7 +12434,7 @@ GameObject:
   - component: {fileID: 2038344218}
   - component: {fileID: 2038344217}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: Pagan NPC
   m_TagString: Pagan_NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12463,7 +12534,7 @@ Transform:
   m_LocalScale: {x: 2.2195299, y: 2.219529, z: 2.2195299}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2044209774 stripped
 Transform:
@@ -16559,7 +16630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3204595245838125174, guid: 37a9d7a56624df24693bc66e040cd41c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.757708
+      value: 18.61
       objectReference: {fileID: 0}
     - target: {fileID: 3204595245838125174, guid: 37a9d7a56624df24693bc66e040cd41c, type: 3}
       propertyPath: m_LocalPosition.z
