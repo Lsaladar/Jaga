@@ -38,8 +38,9 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1011.72363, g: 845.0083, b: 922.02734, a: 1}
+  m_IndirectSpecularColor: {r: 1018.6968, g: 847.56836, b: 913.9375, a: 1}
   m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
@@ -96,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: cab93849ac38d4643a5eea02ddf03fde, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 9a6d8c3ba01665e49b47720bff30c73b, type: 2}
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3600,7 +3601,7 @@ GameObject:
   - component: {fileID: 1595307309}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Zoom Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

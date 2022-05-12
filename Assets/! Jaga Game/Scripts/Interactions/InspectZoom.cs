@@ -6,14 +6,16 @@ using UnityEngine;
 public class InspectZoom : MonoBehaviour
 {
     public bool inspecting = false;
-    public Transform ogPos;
-    public Transform newPos;
+    public Transform player;
+    public Transform target;
 
     public GameObject camHolder;
 
     public float zoomSpeed = 10f;
 
     public CameraController cam;
+
+    public PlayerInteractions playerInteractions;
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +26,33 @@ public class InspectZoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if(inspecting)
-        // {
-        //     cam.FreezeTime();
-        //     camHolder.transform.position = Vector3.Lerp(ogPos, newPos, zoomSpeed * Time.deltaTime);
-        // }
-        // else
-        // {
-        //     cam.UnFreezeTime();
-        //     camHolder.transform.position = Vector3.Lerp(newPos, ogPos, zoomSpeed * Time.deltaTime);
-        // }
+        if (inspecting)
+        {
+            playerInteractions.isInspecting = true;
+            cam.FreezeTime();
+            MoveCam();
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                inspecting = false;
+                playerInteractions.isInspecting = false;
+                cam.UnFreezeTime();
+                //inspectionUI.SetActive(false);
+                ReturnCam();
+
+            }
+        }
+    }
+
+    public void MoveCam()
+    {
+        Vector3 newPos = new Vector3(target.position.x, target.position.y, target.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, newPos, zoomSpeed * Time.deltaTime);
+    }
+
+    public void ReturnCam()
+    {
+        Vector3 newPost = new Vector3(player.position.x, player.position.y, player.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, newPost, zoomSpeed * Time.deltaTime);
     }
 }
