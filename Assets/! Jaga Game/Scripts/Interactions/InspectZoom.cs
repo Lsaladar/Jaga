@@ -17,6 +17,8 @@ public class InspectZoom : MonoBehaviour
 
     public PlayerInteractions playerInteractions;
 
+    public GameObject inspectionUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,7 @@ public class InspectZoom : MonoBehaviour
         {
             playerInteractions.isInspecting = true;
             cam.FreezeTime();
+            inspectionUI.SetActive(true);
             MoveCam();
 
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -37,7 +40,7 @@ public class InspectZoom : MonoBehaviour
                 inspecting = false;
                 playerInteractions.isInspecting = false;
                 cam.UnFreezeTime();
-                //inspectionUI.SetActive(false);
+                inspectionUI.SetActive(false);
                 ReturnCam();
 
             }
@@ -47,12 +50,12 @@ public class InspectZoom : MonoBehaviour
     public void MoveCam()
     {
         Vector3 newPos = new Vector3(target.position.x, target.position.y, target.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, newPos, zoomSpeed * Time.deltaTime);
+        camHolder.transform.position = Vector3.MoveTowards(transform.position, newPos, zoomSpeed * Time.deltaTime);
     }
 
     public void ReturnCam()
     {
-        Vector3 newPost = new Vector3(player.position.x, player.position.y, player.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, newPost, zoomSpeed * Time.deltaTime);
+        Vector3 newPos = new Vector3(player.position.x, player.position.y, player.position.z);
+        camHolder.transform.position = Vector3.MoveTowards(transform.position, newPos, zoomSpeed * Time.deltaTime);
     }
 }
