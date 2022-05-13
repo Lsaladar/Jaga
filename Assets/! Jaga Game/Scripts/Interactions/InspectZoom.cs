@@ -6,12 +6,8 @@ using UnityEngine;
 public class InspectZoom : MonoBehaviour
 {
     public bool inspecting = false;
-    public Transform player;
-    public Transform target;
 
     public GameObject camHolder;
-
-    public float zoomSpeed = 10f;
 
     public CameraController cam;
 
@@ -33,7 +29,6 @@ public class InspectZoom : MonoBehaviour
             playerInteractions.isInspecting = true;
             cam.FreezeTime();
             inspectionUI.SetActive(true);
-            MoveCam();
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -41,21 +36,7 @@ public class InspectZoom : MonoBehaviour
                 playerInteractions.isInspecting = false;
                 cam.UnFreezeTime();
                 inspectionUI.SetActive(false);
-                ReturnCam();
-
             }
         }
-    }
-
-    public void MoveCam()
-    {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y, target.position.z);
-        camHolder.transform.position = Vector3.MoveTowards(transform.position, newPos, zoomSpeed * Time.deltaTime);
-    }
-
-    public void ReturnCam()
-    {
-        Vector3 newPos = new Vector3(player.position.x, player.position.y, player.position.z);
-        camHolder.transform.position = Vector3.MoveTowards(transform.position, newPos, zoomSpeed * Time.deltaTime);
     }
 }
