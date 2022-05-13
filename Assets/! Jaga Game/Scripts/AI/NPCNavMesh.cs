@@ -12,6 +12,10 @@ public class NPCNavMesh : MonoBehaviour
     
     public bool hasContact; 
 
+    public float range;
+    [SerializeField] private GameObject wnpcs;
+
+
     //private NPCLook npcLook;
 
     //public bool isStopped;
@@ -34,7 +38,7 @@ public class NPCNavMesh : MonoBehaviour
 
     private void Start()
     {
-        DestSelect();   
+        DestSelect();
 
         //npcLook = GetComponent<NPCLook>();
     }
@@ -49,6 +53,12 @@ public class NPCNavMesh : MonoBehaviour
             FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
             Debug.Log("ww");
         }
+
+        if(Vector3.Distance(wnpcs.transform.position, transform.position) <= range)
+        {
+            Debug.Log("!");
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -69,5 +79,7 @@ public class NPCNavMesh : MonoBehaviour
         //bool isStopped = true;
         Debug.Log("s");
     }
+
+
 
 }

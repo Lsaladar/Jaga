@@ -6,43 +6,37 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Rigidbody))]
 public class YAI2 : MonoBehaviour
 {
+    public GameObject yagaDest;
+    NavMeshAgent yagaAgent;
     [SerializeField] private GameObject[] des;
-    [SerializeField] private GameObject playerDes;
-    [SerializeField] private bool atDes;
     [SerializeField] private int rand;
-    [SerializeField] private bool isStalking;
+    public static bool isStalking;
 
-    private NavMeshAgent navMeshAgent;
-
-    private void Awake()
+    void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        yagaAgent = GetComponent<NavMeshAgent>();
+        isStalking = false;
     }
 
-    private void DestSelect()
+    void Update()
+    {
+        if (isStalking)
+        {
+            yagaAgent.SetDestination(yagaDest.transform.position);
+        }
+        else
+        {
+            YagaIdle();
+        }
+        
+
+    }
+
+    void YagaIdle()
     {
         int rand = Random.Range(0, 9);
 
-        navMeshAgent.destination = des[rand].transform.position;
-
-        Debug.Log(rand);
-    }
-
-    private void ChasePlayer()
-    {
-        navMeshAgent.destination = playerDes.transform.position;
-    }
-
-    private void Start()
-    {
-        DestSelect();
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
-        //Debug.Log("e");
-
+        yagaAgent.destination = des[rand].transform.position;
     }
 
 }
