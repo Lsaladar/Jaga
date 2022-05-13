@@ -33,7 +33,7 @@ public class PlayerInteractions : MonoBehaviour
             {
                 hitSomething = true;
 
-                if(hit.collider.tag == "Christian_NPC" || hit.collider.tag == "Pagan_NPC")
+                if(hit.collider.tag == "Christian_NPC" || hit.collider.tag == "Pagan_NPC" || hit.collider.tag == "NPC")
                 {
                     interactionText.text = interactable.GetCharacterDescription();
                 }
@@ -55,6 +55,10 @@ public class PlayerInteractions : MonoBehaviour
                     else if(hit.collider.tag == "Pagan_NPC")
                     {
                         interactable.PaganInteract();
+                    }
+                    else if(hit.collider.tag == "NPC")
+                    {
+                        interactable.NPCInteract();
                     }
                     else if(hit.collider.tag == "Interactable Item")
                     {
