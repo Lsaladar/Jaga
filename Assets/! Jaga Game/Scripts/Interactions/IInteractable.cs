@@ -7,6 +7,7 @@ public interface IInteractable
     void ChristianInteract();
     void PaganInteract();
     void ItemInteract();
+    void NPCInteract();
     void ItemZoom();
     void OpenDoor();
     string GetCharacterDescription();
