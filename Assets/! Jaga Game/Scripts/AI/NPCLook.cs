@@ -14,10 +14,16 @@ public class NPCLook : MonoBehaviour
 
         //contact = npcNavMesh.hasContact;
     }
+    private void Update() 
+    {
+        if (contact)
+        {
+            Debug.Log("c");
+        }
+    }
 
     void OnTriggerEnter (Collider other) 
     {
-        
         
         transform.LookAt(other.gameObject.transform);
         
@@ -28,12 +34,6 @@ public class NPCLook : MonoBehaviour
         
     }
 
-    private void Update() 
-    {
-        if (contact)
-        {
-            //Debug.Log("c");
-        }
-    }
+    
 
 }
