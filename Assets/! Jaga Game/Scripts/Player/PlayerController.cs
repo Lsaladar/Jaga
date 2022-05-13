@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
         if (isWalking)
         {
-            speed = 4f;
+            speed = 9f;
 
             if(playerStamina <= maxStamina - 0.01)
             {
@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
             {
                 staminaFull = false;
                 staminaProgressUI.color = new Vector4(255, 0, 0, 255);
-                speed = 4f;
+                speed = 9f;
                 sliderCanvasGroup.alpha = 0;
             }
         }
