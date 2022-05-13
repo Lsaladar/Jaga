@@ -3999,6 +3999,7 @@ GameObject:
   - component: {fileID: 418943364}
   - component: {fileID: 418943373}
   - component: {fileID: 418943372}
+  - component: {fileID: 418943374}
   m_Layer: 0
   m_Name: Opening cutscene
   m_TagString: Untagged
@@ -4226,7 +4227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 480
+    x: 479
     y: 76
     width: 111
     height: 40
@@ -4244,6 +4245,7 @@ MonoBehaviour:
   - {fileID: 418943351}
   - {fileID: 418943350}
   - {fileID: 418943349}
+  - {fileID: 418943374}
   - {fileID: 418943348}
   - {fileID: 418943347}
   - {fileID: 418943346}
@@ -4287,8 +4289,10 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 418943353}
+  selectedCommands:
+  - {fileID: 418943374}
   variables: []
   description: 
   stepPause: 0
@@ -4768,6 +4772,23 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
   fadeTweenType: 4
+--- !u!114 &418943374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418943344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: cab0c97e7649d2b43941064dad25cb48, type: 3}
+  volume: 1
+  waitUntilFinished: 0
 --- !u!1001 &444894268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10960,6 +10981,7 @@ GameObject:
   - component: {fileID: 1219889667}
   - component: {fileID: 1219889666}
   - component: {fileID: 1219889664}
+  - component: {fileID: 1219889665}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -11081,6 +11103,14 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+--- !u!81 &1219889665
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219889663}
+  m_Enabled: 1
 --- !u!20 &1219889666
 Camera:
   m_ObjectHideFlags: 0
