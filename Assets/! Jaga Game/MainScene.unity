@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 568.8733, g: 383.82275, b: 306.11084, a: 1}
+  m_IndirectSpecularColor: {r: 614.3367, g: 442.34033, b: 419.55176, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3707,9 +3707,15 @@ GameObject:
   - component: {fileID: 252296496}
   - component: {fileID: 252296527}
   - component: {fileID: 252296503}
-  - component: {fileID: 252296502}
   - component: {fileID: 252296501}
   - component: {fileID: 252296500}
+  - component: {fileID: 252296532}
+  - component: {fileID: 252296531}
+  - component: {fileID: 252296530}
+  - component: {fileID: 252296529}
+  - component: {fileID: 252296528}
+  - component: {fileID: 252296523}
+  - component: {fileID: 252296502}
   m_Layer: 0
   m_Name: Priest dialog
   m_TagString: Untagged
@@ -3765,9 +3771,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 467.60034
-    y: 350.95728
-    width: 69.67212
+    x: 574.5217
+    y: 450.92847
+    width: 70.93021
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3855,18 +3861,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 252296495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 91
+  itemId: 100
   indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 252296524}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
+  storyText: She's been lurking around at night breking windows
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &252296503
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3957,9 +3969,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 545
-    y: 294
-    width: 115.57373
+    x: 565.9301
+    y: 366.0931
+    width: 115.11621
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4122,9 +4134,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 570.1429
-    y: 211
-    width: 151.63928
+    x: 567.8173
+    y: 280.76746
+    width: 159.30222
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4182,9 +4194,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 570
-    y: 129
-    width: 72.950806
+    x: 582.59015
+    y: 120.37932
+    width: 73.25579
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4194,7 +4206,8 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 252296513}
-  - {fileID: 252296502}
+  - {fileID: 252296532}
+  - {fileID: 252296530}
   suppressAllAutoSelections: 0
 --- !u!114 &252296515
 MonoBehaviour:
@@ -4265,9 +4278,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 569.7143
-    y: 48.142857
-    width: 109.01636
+    x: 561.5535
+    y: -39.764046
+    width: 108.13947
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4409,6 +4422,33 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 1585460425}
+--- !u!114 &252296523
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 99
+  indentLevel: 0
+  storyText: She was sent by god to punish the wicked and sick of this village.
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &252296524
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4423,9 +4463,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 303.18393
-    y: 145.594
-    width: 76.22949
+    x: 297.7294
+    y: 147.41217
+    width: 75.58137
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4455,11 +4495,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 195.63818, y: 28.968063}
+  scrollPos: {x: 605.0224, y: 93.319466}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.6100004
+  zoom: 0.43000045
   scrollViewRect:
     serializedVersion: 2
     x: 0
@@ -4509,6 +4549,138 @@ MonoBehaviour:
   indentLevel: 0
   stopParentFlowchart: 0
   targetFlowcharts: []
+--- !u!114 &252296528
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 98
+  indentLevel: 0
+  storyText: Of course I believe in her.
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &252296529
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 715.90674
+    y: 153.192
+    width: 87.20926
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 97
+  blockName: Jaga 2
+  description: 
+  eventHandler: {fileID: 0}
+  commandList: []
+  suppressAllAutoSelections: 0
+--- !u!114 &252296530
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 96
+  indentLevel: 0
+  text: Isn't Jaga a witch
+  description: 
+  targetBlock: {fileID: 252296529}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &252296531
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 713.15784
+    y: 42.57873
+    width: 98.83716
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 95
+  blockName: Rumours
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 252296528}
+  - {fileID: 252296523}
+  - {fileID: 252296502}
+  suppressAllAutoSelections: 0
+--- !u!114 &252296532
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 94
+  indentLevel: 0
+  text: Do you believe in the rumours?
+  description: 
+  targetBlock: {fileID: 252296531}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
 --- !u!1001 &255787953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7140,7 +7312,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 418943353}
   selectedCommands:
-  - {fileID: 418943374}
+  - {fileID: 418943352}
   variables: []
   description: 
   stepPause: 0
@@ -7622,7 +7794,7 @@ MonoBehaviour:
   fadeTweenType: 4
 --- !u!114 &418943374
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -29868,7 +30040,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -394.71228
     y: -34.40738
-    width: 144.04254
+    width: 173.28763
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -29992,7 +30164,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -690.7123
     y: -34.40738
-    width: 157.87233
+    width: 186.98625
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -30020,11 +30192,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 863.4539, y: 229.35861}
+  scrollPos: {x: 1124.1163, y: 207.51216}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 402
-  zoom: 0.94000006
+  zoom: 0.73000026
   scrollViewRect:
     serializedVersion: 2
     x: 0
