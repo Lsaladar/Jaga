@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 614.3367, g: 442.34033, b: 419.55176, a: 1}
+  m_IndirectSpecularColor: {r: 612.1538, g: 441.80884, b: 422.18066, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3716,6 +3716,9 @@ GameObject:
   - component: {fileID: 252296528}
   - component: {fileID: 252296523}
   - component: {fileID: 252296502}
+  - component: {fileID: 252296535}
+  - component: {fileID: 252296534}
+  - component: {fileID: 252296533}
   m_Layer: 0
   m_Name: Priest dialog
   m_TagString: Untagged
@@ -3773,7 +3776,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 574.5217
     y: 450.92847
-    width: 70.93021
+    width: 69.73683
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3866,7 +3869,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 100
   indentLevel: 0
-  storyText: She's been lurking around at night breking windows
+  storyText: She's been lurking around at night breking windows, destroying people's
+    ceilings and causing general havoc.
   description: 
   character: {fileID: 794745317}
   portrait: {fileID: 0}
@@ -3971,7 +3975,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 565.9301
     y: 366.0931
-    width: 115.11621
+    width: 115.78945
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4136,7 +4140,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 567.8173
     y: 280.76746
-    width: 159.30222
+    width: 153.94733
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4196,7 +4200,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 582.59015
     y: 120.37932
-    width: 73.25579
+    width: 72.368416
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4280,7 +4284,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 561.5535
     y: -39.764046
-    width: 108.13947
+    width: 106.57893
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4465,7 +4469,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 297.7294
     y: 147.41217
-    width: 75.58137
+    width: 76.31578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4495,19 +4499,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 605.0224, y: 93.319466}
+  scrollPos: {x: 287.9046, y: 249.75722}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.43000045
+  zoom: 0.7600002
   scrollViewRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 252296531}
+  selectedCommands:
+  - {fileID: 252296533}
   variables: []
   description: 
   stepPause: 0
@@ -4592,7 +4598,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 715.90674
     y: 153.192
-    width: 87.20926
+    width: 85.526306
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4641,9 +4647,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 713.15784
+    x: 723.6842
     y: 42.57873
-    width: 98.83716
+    width: 98.6842
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4655,6 +4661,9 @@ MonoBehaviour:
   - {fileID: 252296528}
   - {fileID: 252296523}
   - {fileID: 252296502}
+  - {fileID: 252296535}
+  - {fileID: 252296534}
+  - {fileID: 252296533}
   suppressAllAutoSelections: 0
 --- !u!114 &252296532
 MonoBehaviour:
@@ -4681,6 +4690,88 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &252296533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 104
+  indentLevel: 0
+  storyText: Only if they follow the words of the lord will they be saved and find
+    piece.
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &252296534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 103
+  indentLevel: 0
+  storyText: They're sick and need to be healed.
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &252296535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 102
+  indentLevel: 0
+  storyText: That's why I have to save the people of this village.
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1001 &255787953
 PrefabInstance:
   m_ObjectHideFlags: 0
