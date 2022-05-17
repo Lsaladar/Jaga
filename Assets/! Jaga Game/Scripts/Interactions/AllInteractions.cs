@@ -5,7 +5,9 @@ using Fungus;
 
 public class AllInteractions : MonoBehaviour, IInteractable
 {
+    [Header("Fungus Variables")]
     public Flowchart flowchart;
+    public string blockName;
 
     [Header("Names")]
     public string characterName = "NPC";
@@ -33,12 +35,17 @@ public class AllInteractions : MonoBehaviour, IInteractable
 
     public void ChristianInteract()
     {
-        flowchart.ExecuteBlock("First Interaction Christian");
+        flowchart.ExecuteBlock(blockName);
     }
 
     public void PaganInteract()
     {
-        flowchart.ExecuteBlock("First Interaction Pagan");
+        flowchart.ExecuteBlock(blockName);
+    }
+
+    public void NPCInteract()
+    {
+        flowchart.ExecuteBlock(blockName);
     }
 
     public void ItemInteract()
