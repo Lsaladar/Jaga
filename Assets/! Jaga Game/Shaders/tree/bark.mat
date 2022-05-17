@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: bark
-  m_Shader: {fileID: -6465566751694194690, guid: b4fd2e110d3b2b042900a94736deb25a, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: f6d0fd9578cd8e445acd35f72805cc6f, type: 3}
   m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,19 +39,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_0709ab63813b4c69bfa18b6709ce8597:
-        m_Texture: {fileID: 2800000, guid: c80eebe4485511b468f66e3bc321194c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 03f369ede7d1c364e89b5f62585a1bf7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_6be3e73f08a046cf9bb1ca54a9d41664:
-        m_Texture: {fileID: 2800000, guid: 932c4dbaf05ef5d4baea55d3d4528adf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6e9114f4c980c5b4dae0b3b2b08a3c7b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_90c4e02336144818ac7dfe5a11c15007:
-        m_Texture: {fileID: 2800000, guid: 97adf49ac6307b44ea15f98eda46122c, type: 3}
+        m_Texture: {fileID: 2800000, guid: a9983bc260ec9934892bd121783f5a1f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_dbe0eddf0d9e43668bb1ed7351e57e50:
-        m_Texture: {fileID: 2800000, guid: 9d5f84fa54c97234ba5b4158f28c039f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9f2b9419bf9ea964386adb72000bea06, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
