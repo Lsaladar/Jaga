@@ -277,7 +277,7 @@
     },
     "m_PreviewData": {
         "serializedMesh": {
-            "m_SerializedMesh": "{\"mesh\":{\"fileID\":10200,\"guid\":\"0000000000000000e000000000000000\",\"type\":0}}",
+            "m_SerializedMesh": "{\"mesh\":{\"fileID\":-7387706064836869012,\"guid\":\"c2bf75f4a74e7cd4d84be6a340c82712\",\"type\":3}}",
             "m_Guid": ""
         }
     },
@@ -343,7 +343,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"11544ee42480512458e932760cd0cba1\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"2304c4abc5ac25044a5594fc24587233\",\"type\":3}}",
         "m_Guid": ""
     },
     "m_Modifiable": true,
@@ -1132,7 +1132,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"067a914bdc300c541a94084b5f50afd0\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"ed96e760441bcc94ab324f3923193896\",\"type\":3}}",
         "m_Guid": ""
     },
     "m_Modifiable": true,
@@ -1515,7 +1515,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"d674e6c1568478049895327c734bdcb0\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"f8a502c09d126db4aa11f6edcfd63c8c\",\"type\":3}}",
         "m_Guid": ""
     },
     "m_Modifiable": true,
@@ -2110,7 +2110,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"dd5d265460e66f145afd2dec08dab861\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"74b4096bec178f24582e9da547fd41c0\",\"type\":3}}",
         "m_Guid": ""
     },
     "m_Modifiable": true,
