@@ -3843,6 +3843,9 @@ GameObject:
   - component: {fileID: 252296528}
   - component: {fileID: 252296523}
   - component: {fileID: 252296502}
+  - component: {fileID: 252296535}
+  - component: {fileID: 252296534}
+  - component: {fileID: 252296533}
   m_Layer: 0
   m_Name: Priest dialog
   m_TagString: Untagged
@@ -3993,7 +3996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 100
   indentLevel: 0
-  storyText: She's been lurking around at night breking windows
+  storyText: She's been lurking around at night breking windows, destroying people's
+    ceilings and causing general havoc.
   description: 
   character: {fileID: 794745317}
   portrait: {fileID: 0}
@@ -4783,6 +4787,9 @@ MonoBehaviour:
   - {fileID: 252296528}
   - {fileID: 252296523}
   - {fileID: 252296502}
+  - {fileID: 252296535}
+  - {fileID: 252296534}
+  - {fileID: 252296533}
   suppressAllAutoSelections: 0
 --- !u!114 &252296532
 MonoBehaviour:
@@ -4809,6 +4816,88 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &252296533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 104
+  indentLevel: 0
+  storyText: Only if they follow the words of the lord will they be saved and find
+    piece.
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &252296534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 103
+  indentLevel: 0
+  storyText: They're sick and need to be healed.
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &252296535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252296495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 102
+  indentLevel: 0
+  storyText: That's why I have to save the people of this village.
+  description: 
+  character: {fileID: 794745317}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1001 &255787953
 PrefabInstance:
   m_ObjectHideFlags: 0
