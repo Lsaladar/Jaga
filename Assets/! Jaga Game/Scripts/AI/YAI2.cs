@@ -34,9 +34,20 @@ public class YAI2 : MonoBehaviour
 
     void YagaIdle()
     {
+        yagaAgent.enabled = true;
         int rand = Random.Range(0, 9);
-
         yagaAgent.destination = des[rand].transform.position;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "DesPoints")
+        {
+            yagaAgent.enabled = false;
+            FunctionTimer.Create(YagaIdle, Random.Range(5f, 10f));
+            Debug.Log("e");
+        } 
+
     }
 
 }
