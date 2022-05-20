@@ -4,10 +4,11 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    void ChristianInteract();
-    void PaganInteract();
+    void BolekInteract();
+    void LolekInteract();
     void ItemInteract();
-    void NPCInteract();
+    void PriestInteract();
+    void ChieftanInteract();
     void ItemZoom();
     void OpenDoor();
     string GetCharacterDescription();

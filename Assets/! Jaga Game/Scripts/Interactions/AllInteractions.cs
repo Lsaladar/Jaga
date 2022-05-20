@@ -33,17 +33,22 @@ public class AllInteractions : MonoBehaviour, IInteractable
         return "Pick up " + itemName;
     }
 
-    public void ChristianInteract()
+    public void BolekInteract()
     {
         flowchart.ExecuteBlock(blockName);
     }
 
-    public void PaganInteract()
+    public void LolekInteract()
     {
         flowchart.ExecuteBlock(blockName);
     }
 
-    public void NPCInteract()
+    public void PriestInteract()
+    {
+        flowchart.ExecuteBlock(blockName);
+    }
+
+    public void ChieftanInteract()
     {
         flowchart.ExecuteBlock(blockName);
     }
