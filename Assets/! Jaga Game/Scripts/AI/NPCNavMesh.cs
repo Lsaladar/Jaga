@@ -7,18 +7,10 @@ using UnityEngine.AI;
 public class NPCNavMesh : MonoBehaviour
 {
     [SerializeField] private GameObject[] des;
-    [SerializeField] private bool atDes;
     [SerializeField] private int rand;
     
-    public bool hasContact; 
 
-    public float range;
     [SerializeField] private GameObject wnpcs;
-
-
-    //private NPCLook npcLook;
-
-    //public bool isStopped;
 
     private NavMeshAgent navMeshAgent;
 
@@ -29,8 +21,8 @@ public class NPCNavMesh : MonoBehaviour
 
     private void DestSelect()
     {
+        navMeshAgent.enabled = true;
         int rand = Random.Range(0, 9);
-
         navMeshAgent.destination = des[rand].transform.position;
 
         //Debug.Log(rand);
@@ -39,25 +31,10 @@ public class NPCNavMesh : MonoBehaviour
     private void Start()
     {
         DestSelect();
-
-        //npcLook = GetComponent<NPCLook>();
     }
 
     private void Update() 
     {
-        Debug.Log(hasContact);
-
-        if (hasContact == true)
-        {
-            FunctionTimer.Create(WNpcsInteracting, Random.Range(5f, 10f));
-            FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
-            Debug.Log("ww");
-        }
-
-        if(Vector3.Distance(wnpcs.transform.position, transform.position) <= range)
-        {
-            Debug.Log("!");
-        }
 
     }
 
@@ -65,21 +42,18 @@ public class NPCNavMesh : MonoBehaviour
     {
         if (other.tag == "DesPoints")
         {
+            navMeshAgent.enabled = false;
             FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
             //Debug.Log("e");
+        } 
+
+        if (other.tag == "WNPC")
+        {
+            navMeshAgent.enabled = false;
+            transform.LookAt(other.gameObject.transform);
+            FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
         }
 
-        
-
     }
-
-    private void WNpcsInteracting()
-    {
-        navMeshAgent.Stop(true);
-        //bool isStopped = true;
-        Debug.Log("s");
-    }
-
-
 
 }

@@ -6,11 +6,12 @@ public class YagaChaseActivate : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Player")
+        {
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            YAI2.isStalking = true;
 
-        this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        YAI2.isStalking = true;
-
-        //Debug.Log("p");
-        
+            //Debug.Log("p");
+        }
     }
 }
