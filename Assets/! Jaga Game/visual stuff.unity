@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1421.6484, g: 1348.2773, b: 2011.6914, a: 1}
+  m_IndirectSpecularColor: {r: 1421.7046, g: 1348.1924, b: 2011.375, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20587,7 +20587,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -20604,7 +20604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260760188144621892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.77, y: 0.02, z: -0.54}
+  m_LocalPosition: {x: 3.48, y: 0.02, z: 0.83}
   m_LocalScale: {x: 0.60217416, y: 0.60217416, z: 0.60217416}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20745,7 +20745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7608659761116256532, guid: 116d5dcf09571b14790f73e6e885af3b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.38
+      value: -5.18
       objectReference: {fileID: 0}
     - target: {fileID: 7608659761116256532, guid: 116d5dcf09571b14790f73e6e885af3b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20753,7 +20753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7608659761116256532, guid: 116d5dcf09571b14790f73e6e885af3b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.43
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 7608659761116256532, guid: 116d5dcf09571b14790f73e6e885af3b, type: 3}
       propertyPath: m_LocalRotation.w
