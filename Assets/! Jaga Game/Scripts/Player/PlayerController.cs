@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
 
         if(!journalOn)
         {
-            if(Input.GetKey(KeyCode.Alpha1))
+            if(Input.GetKey(KeyCode.J))
             {
                 journal.SetActive(true);
                 journalIcon.SetActive(false);

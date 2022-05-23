@@ -52,6 +52,7 @@ public class ItemInspect : MonoBehaviour
                 currPos = Input.mousePosition;
                 Vector3 offset = currPos - lastPos;
                 transform.RotateAround(transform.position, Vector3.up, offset.x * rotationSpeed * Time.deltaTime);
+                transform.RotateAround(transform.position, Vector3.forward, offset.y * -rotationSpeed * Time.deltaTime);
             }
             lastPos = Input.mousePosition;
 
