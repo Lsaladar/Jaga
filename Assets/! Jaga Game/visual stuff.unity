@@ -20476,6 +20476,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 140074194263250231, guid: 1cc7274d22f39904d935e1eac818a02c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2534964839176971238, guid: c2bf75f4a74e7cd4d84be6a340c82712, type: 3}
     - target: {fileID: 140074194529278542, guid: 1cc7274d22f39904d935e1eac818a02c, type: 3}
       propertyPath: m_Name
       value: 'torch '
