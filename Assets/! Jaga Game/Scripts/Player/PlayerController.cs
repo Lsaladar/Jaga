@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
 
-[RequireComponent (typeof(HeadBobController))]
-[RequireComponent (typeof(PlayerInteractions))]
+[RequireComponent(typeof(HeadBobController))]
+[RequireComponent(typeof(PlayerInteractions))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Variables")]
@@ -36,12 +36,12 @@ public class PlayerController : MonoBehaviour
     public float maxStamina = 100f;
     public float playerStamina = 100f;
 
-    [SerializeField, Range (0, 50)] private float staminaRegen = 0.5f;
-    [SerializeField, Range (0, 50)] private float staminaDrain = 0.5f;
+    [SerializeField, Range(0, 50)] private float staminaRegen = 0.5f;
+    [SerializeField, Range(0, 50)] private float staminaDrain = 0.5f;
 
     [Header("Reputation Variables")]
     public float maxReputation = 100f;
-    public float playerReputation = 70f;
+    public float playerReputation = 15f;
 
     [Header("UI")]
     [SerializeField] private Image staminaProgressUI = null;
@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
     // public Flowchart flowchart2;
     // bool canInteract1 = false;
     // bool canInteract2 = false;
+
+    public AudioSource[] sound;
 
     void Start()
     {
@@ -155,6 +157,64 @@ public class PlayerController : MonoBehaviour
         else
         {
             sliderCanvasGroup.alpha = 1;
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log("You have triggered an object");
+        if(collider.gameObject.name == "BranchSFX_Trigger")
+        {
+            Debug.Log("Playing sound 1");
+            sound[0].Play();
+        }
+        else if(collider.gameObject.name == "HameringSFX_Trigger")
+        {
+            Debug.Log("Playing sound 2");
+            sound[1].Play();
+        }
+    }
+
+    void OnTriggerStay(Collider collider)
+    {
+        if(collider.gameObject.name == "Water")
+        {
+            if(!sound[2].isPlaying)
+            {
+                Debug.Log("Play sound 3");
+                sound[2].Play(1);
+
+                if(sound[2].clip.length > 1.0f)
+                {
+                    sound[2].Stop();
+                }
+            }
+        }
+        else if(collider.gameObject.name == "Ground")
+        {
+            if (!sound[3].isPlaying)
+            {
+                Debug.Log("Play sound 3");
+                sound[3].Play(1);
+
+                if (sound[3].clip.length > 1.0f)
+                {
+                    sound[3].Stop();
+                }
+            }
+        }
+        else if(collider.gameObject.name == "Grass")
+        {
+            if (!sound[4].isPlaying)
+            {
+                Debug.Log("Play sound 3");
+                sound[4].Play(1);
+
+                if (sound[4].clip.length > 1.0f)
+                {
+                    sound[4].Stop();
+                }
+            }
         }
     }
 }

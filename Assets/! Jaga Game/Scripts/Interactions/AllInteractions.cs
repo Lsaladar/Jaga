@@ -53,6 +53,16 @@ public class AllInteractions : MonoBehaviour, IInteractable
         flowchart.ExecuteBlock(blockName);
     }
 
+    void BrewessInteract()
+    {
+        flowchart.ExecuteBlock(blockName);
+    }
+
+    void HunterInteract()
+    {
+        flowchart.ExecuteBlock(blockName);
+    }
+
     public void ItemInteract()
     {
         itemInspect.isInspecting = true;

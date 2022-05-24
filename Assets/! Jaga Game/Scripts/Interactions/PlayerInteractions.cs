@@ -33,7 +33,7 @@ public class PlayerInteractions : MonoBehaviour
             {
                 hitSomething = true;
 
-                if(hit.collider.name == "Bolek" || hit.collider.name == "Lolek" || hit.collider.name == "Priest" || hit.collider.name == "Chieftan")
+                if(hit.collider.name == "Bolek" || hit.collider.name == "Lolek" || hit.collider.name == "Priest" || hit.collider.name == "Chieftan" || hit.collider.name == "Brewess" || hit.collider.name == "Hunter")
                 {
                     interactionText.text = interactable.GetCharacterDescription();
                 }

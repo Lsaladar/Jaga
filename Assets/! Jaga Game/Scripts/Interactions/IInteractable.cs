@@ -9,6 +9,8 @@ public interface IInteractable
     void ItemInteract();
     void PriestInteract();
     void ChieftanInteract();
+    //void BrewessInteract();
+    //void HunterInteract();
     void ItemZoom();
     void OpenDoor();
     string GetCharacterDescription();
