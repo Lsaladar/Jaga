@@ -53,8 +53,15 @@ public class PlayerController : MonoBehaviour
     // bool canInteract1 = false;
     // bool canInteract2 = false;
 
+    [Space(20)]
+    [Header("Journal Variables")]
+    public GameObject journal;
+    public GameObject journalIcon;
+    public bool journalOn = false;
+
     void Start()
     {
+        journal.SetActive(false);
         sliderCanvasGroup.alpha = 0;
     }
 
@@ -121,6 +128,26 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);  
+        }
+
+
+
+        if(!journalOn)
+        {
+            if(Input.GetKey(KeyCode.J))
+            {
+                journal.SetActive(true);
+                journalIcon.SetActive(false);
+                journalOn = true;
+            }
+        }
+        else
+        {
+            if(Input.GetKey(KeyCode.Escape)){
+                journal.SetActive(false);
+                journalIcon.SetActive(true);
+                journalOn = false;
+            }
         }
     }
 

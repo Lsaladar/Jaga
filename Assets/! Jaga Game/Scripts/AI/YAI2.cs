@@ -12,11 +12,59 @@ public class YAI2 : MonoBehaviour
     [SerializeField] private int rand;
     public static bool isStalking;
 
+    //field of view variables
+    public float radius;
+    public float angle;
+
+    public GameObject playerRef;
+
+    public LayerMask targetMask;
+    public LayerMask obstructionMask;
+
+    public bool canSeePlayer;
+
+
+
     void Start()
     {
         yagaAgent = GetComponent<NavMeshAgent>();
         isStalking = false;
+
+        //field of view start
+        playerRef = GameObject.FindGameObjectEithTag("Player");
+        StartCoroutine(FOVRoutine());
     }
+
+    //Finding player coroutine done 5x every sec
+    private IEnumerator FOVRoutine()
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.2f)
+
+        while (true)
+        {
+            yeild return wait;
+            FieldOfViewCheck();
+        }
+    }
+
+    private void FieldOfViewCheck()
+    {
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+
+        if(rangeChecks.Length != 0)
+        {
+            Tranform target = rangeChecks[0].transform;
+            Vector3 directionToTarget = (target.position - transform.position).normalized;
+
+            if(Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
+            {
+                float distanceToTarget = Vector3
+            }
+            else
+                canSeePlayer = false;
+        }
+    }
+
 
     void Update()
     {
