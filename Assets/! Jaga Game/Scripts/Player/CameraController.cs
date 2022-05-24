@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public DayCycleController dayCycle;
+    public GameObject dayCycle;
 
     public float cameraSpeed = 100f;
 
@@ -22,7 +22,6 @@ public class CameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         playerController = GetComponentInParent<PlayerController>();
         headBobController = GetComponentInParent<HeadBobController>();
-        dayCycle = GetComponent<DayCycleController>();
     }
 
     void Update()
@@ -44,7 +43,7 @@ public class CameraController : MonoBehaviour
         playerController.canMove = false;
         headBobController._enable = false;
         interactionUI.SetActive(false);
-        dayCycle.isEnabled = false;
+        dayCycle.SetActive(false);
     }
 
     public void UnFreezeTime()
@@ -54,6 +53,6 @@ public class CameraController : MonoBehaviour
         playerController.canMove = true;
         headBobController._enable = true;
         interactionUI.SetActive(true);
-        dayCycle.isEnabled = true;
+        dayCycle.SetActive(true);
     }
 }
