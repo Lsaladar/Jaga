@@ -14,6 +14,7 @@ public class YAI2 : MonoBehaviour
 
     //field of view variables
     public float radius;
+    [Range(0, 360)]
     public float angle;
 
     public GameObject playerRef;
@@ -31,18 +32,18 @@ public class YAI2 : MonoBehaviour
         isStalking = false;
 
         //field of view start
-        playerRef = GameObject.FindGameObjectEithTag("Player");
+        playerRef = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOVRoutine());
     }
 
     //Finding player coroutine done 5x every sec
     private IEnumerator FOVRoutine()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.2f)
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
 
         while (true)
         {
-            yeild return wait;
+            yield return wait;
             FieldOfViewCheck();
         }
     }
@@ -51,18 +52,25 @@ public class YAI2 : MonoBehaviour
     {
         Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
 
-        if(rangeChecks.Length != 0)
+        if (rangeChecks.Length != 0)
         {
-            Tranform target = rangeChecks[0].transform;
+            Transform target = rangeChecks[0].transform;
             Vector3 directionToTarget = (target.position - transform.position).normalized;
 
-            if(Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
+            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
             {
-                float distanceToTarget = Vector3
+                float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                    canSeePlayer = true;
+                else
+                    canSeePlayer = false;
             }
             else
                 canSeePlayer = false;
         }
+        else if (canSeePlayer)
+            canSeePlayer = false;
     }
 
 
