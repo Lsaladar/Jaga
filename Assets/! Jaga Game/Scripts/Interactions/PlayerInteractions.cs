@@ -33,7 +33,7 @@ public class PlayerInteractions : MonoBehaviour
             {
                 hitSomething = true;
 
-                if(hit.collider.tag == "Christian_NPC" || hit.collider.tag == "Pagan_NPC" || hit.collider.tag == "NPC")
+                if(hit.collider.name == "Bolek" || hit.collider.name == "Lolek" || hit.collider.name == "Priest" || hit.collider.name == "Chieftan" || hit.collider.name == "Brewess" || hit.collider.name == "Hunter")
                 {
                     interactionText.text = interactable.GetCharacterDescription();
                 }
@@ -48,17 +48,17 @@ public class PlayerInteractions : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if(hit.collider.tag == "Christian_NPC")
+                    if(hit.collider.name == "Bolek")
                     {
-                        interactable.ChristianInteract();
+                        interactable.BolekInteract();
                     }
-                    else if(hit.collider.tag == "Pagan_NPC")
+                    else if(hit.collider.name == "Lolek")
                     {
-                        interactable.PaganInteract();
+                        interactable.LolekInteract();
                     }
-                    else if(hit.collider.tag == "NPC")
+                    else if(hit.collider.name == "Priest")
                     {
-                        interactable.NPCInteract();
+                        interactable.PriestInteract();
                     }
                     else if(hit.collider.tag == "Interactable Item")
                     {

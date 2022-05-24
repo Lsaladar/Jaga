@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/! Jaga Game/Menu.unity.meta
 guid: 5ab0c548bdfc6864eb13c5fac36533ec
+========
+guid: d384c09de8146864781f1cd0dcb071e7
+folderAsset: yes
+>>>>>>>> Dialogue-and-story:Assets/! Jaga Game/Scripts/Test.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
