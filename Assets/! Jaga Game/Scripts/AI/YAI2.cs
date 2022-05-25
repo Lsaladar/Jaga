@@ -76,13 +76,13 @@ public class YAI2 : MonoBehaviour
 
     void Update()
     {
-        if (isStalking)
+        if (canSeePlayer)
         {
             yagaAgent.SetDestination(yagaDest.transform.position);
         }
-        else
+        else if (!canSeePlayer)
         {
-            YagaIdle();
+            
         }
         
 
@@ -93,7 +93,9 @@ public class YAI2 : MonoBehaviour
         yagaAgent.enabled = true;
         int rand = Random.Range(0, 9);
         yagaAgent.destination = des[rand].transform.position;
+        Debug.Log(rand);
     }
+
 
     void OnTriggerEnter(Collider other)
     {
