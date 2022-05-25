@@ -7128,6 +7128,14 @@ PrefabInstance:
       value: BY
       objectReference: {fileID: 0}
     - target: {fileID: 2813260605796679045, guid: 04c23ea301759764cb964a82761efc7b, type: 3}
+      propertyPath: angle
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813260605796679045, guid: 04c23ea301759764cb964a82761efc7b, type: 3}
+      propertyPath: radius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813260605796679045, guid: 04c23ea301759764cb964a82761efc7b, type: 3}
       propertyPath: yagaDest
       value: 
       objectReference: {fileID: 1802912024}
@@ -7171,6 +7179,14 @@ PrefabInstance:
       propertyPath: des.Array.data[9]
       value: 
       objectReference: {fileID: 835604951}
+    - target: {fileID: 2813260605796679047, guid: 04c23ea301759764cb964a82761efc7b, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813260605796679047, guid: 04c23ea301759764cb964a82761efc7b, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2813260605796679065, guid: 04c23ea301759764cb964a82761efc7b, type: 3}
       propertyPath: m_RootOrder
       value: 25

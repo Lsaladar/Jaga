@@ -12,11 +12,12 @@ public class YAI2 : MonoBehaviour
     [SerializeField] private int rand;
     public static bool isStalking;
 
-    //field of view variables
+    [Header("Field of view variables")]
     public float radius;
     [Range(0, 360)]
     public float angle;
 
+    [Space(20)]
     public GameObject playerRef;
 
     public LayerMask targetMask;
@@ -30,6 +31,7 @@ public class YAI2 : MonoBehaviour
     {
         yagaAgent = GetComponent<NavMeshAgent>();
         isStalking = false;
+        YagaIdle();
 
         //field of view start
         playerRef = GameObject.FindGameObjectWithTag("Player");
@@ -90,6 +92,7 @@ public class YAI2 : MonoBehaviour
 
     void YagaIdle()
     {
+        //Assign destination
         yagaAgent.enabled = true;
         int rand = Random.Range(0, 9);
         yagaAgent.destination = des[rand].transform.position;
