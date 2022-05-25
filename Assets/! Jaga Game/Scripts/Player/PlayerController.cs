@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        playerReputation = flowchart.GetFloatVariable("Reputation");
+        //playerReputation = flowchart.GetFloatVariable("Reputation");
 
         if(canMove)
         {
@@ -206,40 +206,65 @@ public class PlayerController : MonoBehaviour
     {
         if(collider.gameObject.name == "Water")
         {
-            if(!sound[2].isPlaying)
+            if(isMoving)
             {
-                Debug.Log("Play sound 3");
-                sound[2].Play(1);
-
-                if(sound[2].clip.length > 1.0f)
+                if (!sound[2].isPlaying)
                 {
-                    sound[2].Stop();
+                    Debug.Log("Play sound 3");
+                    sound[2].Play(1);
+
+                    if (sound[2].clip.length > 1.0f)
+                    {
+                        sound[2].Stop();
+                    }
                 }
             }
         }
         else if(collider.gameObject.name == "Ground")
         {
-            if (!sound[3].isPlaying)
+            if(isMoving)
             {
-                Debug.Log("Play sound 3");
-                sound[3].Play(1);
-
-                if (sound[3].clip.length > 1.0f)
+                if (!sound[3].isPlaying)
                 {
-                    sound[3].Stop();
+                    Debug.Log("Play sound 4");
+                    sound[3].Play(1);
+
+                    if (sound[3].clip.length > 1.0f)
+                    {
+                        sound[3].Stop();
+                    }
                 }
             }
         }
         else if(collider.gameObject.name == "Grass")
         {
-            if (!sound[4].isPlaying)
+            if(isMoving)
             {
-                Debug.Log("Play sound 3");
-                sound[4].Play(1);
-
-                if (sound[4].clip.length > 1.0f)
+                if (!sound[4].isPlaying)
                 {
-                    sound[4].Stop();
+                    Debug.Log("Play sound 5");
+                    sound[4].Play(1);
+
+                    if (sound[4].clip.length > 1.0f)
+                    {
+                        sound[4].Stop();
+                    }
+                }
+            }
+        }
+        else if (collider.gameObject.name == "Wood")
+        {
+            if(isMoving)
+            {
+                if (!sound[5].isPlaying)
+                {
+                    Debug.Log("Play sound 6");
+                    sound[5].Play(1);
+
+                    if (sound[5].clip.length > 1.0f)
+                    {
+                        sound[5].Stop();
+                    }
                 }
             }
         }
