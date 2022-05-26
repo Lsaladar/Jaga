@@ -34,7 +34,7 @@ public class YAI2 : MonoBehaviour
     {
         yagaAgent = GetComponent<NavMeshAgent>();
         bool isDone = false;
-        YagaIdle();
+        //YagaIdle();
 
         //field of view start
         playerRef = GameObject.FindGameObjectWithTag("Player");
@@ -80,7 +80,7 @@ public class YAI2 : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (canSeePlayer)
         {
@@ -95,15 +95,16 @@ public class YAI2 : MonoBehaviour
             if (!atDest)
             {
                 yagaAgent.enabled = true;
-
+                Debug.Log("not at dest");
                 if (!isDone)
                 {
                     YagaIdle();
-                    isDone = true;
-                    Debug.Log("isdonetrue");
+                    //isDone = true;
+                    //Debug.Log("isdonetrue");
+                    FunctionTimer.Create(SetIsDone, 0.5f);
                 }
             }
-            
+            Debug.Log("cantseeplayer");
         }
 
     }
@@ -117,6 +118,7 @@ public class YAI2 : MonoBehaviour
         yagaAgent.destination = des[rand].transform.position;
         Debug.Log(rand);
         isDone = false;
+        Debug.Log("idleing");
     }
 
 
@@ -132,4 +134,8 @@ public class YAI2 : MonoBehaviour
 
     }
 
+    void SetIsDone()
+    {
+        isDone = true;
+    }
 }
