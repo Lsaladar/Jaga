@@ -9,11 +9,11 @@ public class SceneLoader : MonoBehaviour
     public GameObject loadingScreen;
     public Slider progressBar;
 
-    //public static GameManager instance;
+    public static SceneLoader Instance;
 
     void Awake()
     {
-        //instance = this;
+        Instance = this;
 
         SceneManager.LoadSceneAsync((int)SceneIndex.MainMenu, LoadSceneMode.Additive);
     }
@@ -54,22 +54,4 @@ public class SceneLoader : MonoBehaviour
 
         loadingScreen.gameObject.SetActive(false);
     }
-
-    //public void LoadScene(int levelIndex)
-    //{
-    //    StartCoroutine(LoadAsychronously(levelIndex));
-    //}
-
-    //IEnumerator LoadAsychronously(int levelIndex)
-    //{
-    //    AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
-    //    loadingScene.SetActive(true);
-    //    while (!operation.isDone)
-    //    {
-    //        float progress = Mathf.Clamp01(operation.progress / 0.9f);
-    //        //loadingBar.value = progress;
-
-    //        yield return null;
-    //    }
-    //}
 }
