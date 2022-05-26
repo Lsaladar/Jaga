@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
 
     public GameObject audioSource;
 
-    public AudioMixer mixer;
+    public AudioMixer[] mixer;
 
     public GameObject pauseMenu;
     [SerializeField] bool isGamePaused = false;
@@ -92,7 +92,7 @@ public class Menu : MonoBehaviour
 
     public void SetLevel(float slider)
     {
-        mixer.SetFloat("MusicVolumeMixer", Mathf.Log10(slider) * 20);
+        mixer[0].SetFloat("MusicVolumeMixer", Mathf.Log10(slider) * 20);
     }
 
     void PauseGame()
