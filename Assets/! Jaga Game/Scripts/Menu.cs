@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Character Controller tests");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void QuitGame()

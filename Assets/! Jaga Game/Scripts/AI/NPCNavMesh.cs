@@ -7,8 +7,10 @@ using UnityEngine.AI;
 public class NPCNavMesh : MonoBehaviour
 {
     [SerializeField] private GameObject[] des;
-    [SerializeField] private bool atDes;
     [SerializeField] private int rand;
+    
+
+    [SerializeField] private GameObject wnpcs;
 
     private NavMeshAgent navMeshAgent;
 
@@ -19,23 +21,39 @@ public class NPCNavMesh : MonoBehaviour
 
     private void DestSelect()
     {
+        navMeshAgent.enabled = true;
         int rand = Random.Range(0, 9);
-
         navMeshAgent.destination = des[rand].transform.position;
 
-        Debug.Log(rand);
+        //Debug.Log(rand);
     }
 
     private void Start()
     {
-        DestSelect();   
+        DestSelect();
+    }
+
+    private void Update() 
+    {
+
     }
 
     void OnTriggerEnter(Collider other)
-    {       
-        FunctionTimer.Create(DestSelect, Random.Range(10f, 20f));
-        //Debug.Log("e");
- 
+    {
+        if (other.tag == "DesPoints")
+        {
+            navMeshAgent.enabled = false;
+            FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
+            //Debug.Log("e");
+        } 
+
+        if (other.tag == "WNPC")
+        {
+            navMeshAgent.enabled = false;
+            transform.LookAt(other.gameObject.transform);
+            FunctionTimer.Create(DestSelect, Random.Range(5f, 10f));
+        }
+
     }
 
 }

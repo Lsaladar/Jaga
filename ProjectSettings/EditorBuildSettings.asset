@@ -8,11 +8,14 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/! Jaga Game/Main and pause menu test.unity
     guid: 8ab3a30e83f810740a78fc904c2684cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/! Jaga Game/Character Controller tests.unity
     guid: 6f6d7fa29e971804883bc49e61939a1a
+  - enabled: 1
+    path: Assets/! Jaga Game/MainScene.unity
+    guid: 0aac54708b5fe1746a7fdb6723d841da
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 692695bfd48b9cf44b5369a0199e9889, type: 2}
