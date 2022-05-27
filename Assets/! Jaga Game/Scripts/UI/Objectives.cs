@@ -22,7 +22,7 @@ public class Objectives : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        objectivesDone[1] = priestFlowchart.GetBooleanVariable("Objective");
+        //objectivesDone[1] = priestFlowchart.GetBooleanVariable("Objective");
 
         if(player.journalOn)
         {
