@@ -1581,7 +1581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &692460270
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2800,5 +2800,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7163887956677960840, guid: 220439d33ca72db4b850d210413f9530, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 692460269}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 220439d33ca72db4b850d210413f9530, type: 3}
