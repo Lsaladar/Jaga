@@ -48,7 +48,7 @@ public class CameraController : MonoBehaviour
 
     public void UnFreezeTime()
     {
-        cameraSpeed = 500f;
+        cameraSpeed = 100f;
         Cursor.lockState = CursorLockMode.Locked;
         playerController.canMove = true;
         headBobController._enable = true;
