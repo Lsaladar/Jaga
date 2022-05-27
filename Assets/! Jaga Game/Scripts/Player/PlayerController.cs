@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     public Flowchart flowchart;
     // public Flowchart flowchart2;
     // bool canInteract1 = false;
-    // bool canInteract2 = false;
+    // bool canInteract2 = false; 
 
     [Space(20)]
     [Header("Journal Variables")]

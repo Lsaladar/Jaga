@@ -13,6 +13,11 @@ public class PlayerInteractions : MonoBehaviour
 
     public bool isInspecting = false;
 
+    [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Material defaultMaterial;
+
+    private Transform _selection;
+
     void Update()
     {
         InteractionRay();
@@ -24,6 +29,13 @@ public class PlayerInteractions : MonoBehaviour
         RaycastHit hit;
 
         bool hitSomething = false;
+
+        if (_selection != null)
+        {
+            var selectionRenderer = _selection.GetComponent<Renderer>();
+            selectionRenderer.material = defaultMaterial;
+            _selection = null;
+        }
 
         if(Physics.Raycast(ray, out hit, interactionDistance))
         {
@@ -39,6 +51,16 @@ public class PlayerInteractions : MonoBehaviour
                 }
                 else if(hit.collider.tag == "Interactable Item")
                 {
+                    
+                    var selection = hit.transform;
+                    var selectionRenderer = selection.GetComponent<Renderer>();
+                    if (selectionRenderer != null)
+                    {
+                        selectionRenderer.material = highlightMaterial;
+                    }
+
+                    _selection = selection;
+
                     interactionText.text = interactable.GetItemDescription();
                 }
                 else if (hit.collider.tag == "Door")
