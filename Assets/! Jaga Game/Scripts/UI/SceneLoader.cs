@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    public static SceneLoader Instance;
+
     public GameObject loadingScreen;
     public Slider progressBar;
-
-    public static SceneLoader Instance;
 
     void Awake()
     {
