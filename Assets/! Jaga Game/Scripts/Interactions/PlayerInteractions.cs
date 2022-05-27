@@ -18,6 +18,8 @@ public class PlayerInteractions : MonoBehaviour
 
     private Transform _selection;
 
+    public ItemInspect itemInspect;
+
     void Update()
     {
         InteractionRay();
@@ -54,7 +56,7 @@ public class PlayerInteractions : MonoBehaviour
                     
                     var selection = hit.transform;
                     var selectionRenderer = selection.GetComponent<Renderer>();
-                    if (selectionRenderer != null)
+                    if (selectionRenderer != null && !itemInspect.isInspecting)
                     {
                         selectionRenderer.material = highlightMaterial;
                     }
