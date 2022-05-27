@@ -33,7 +33,7 @@ public class YAI2 : MonoBehaviour
     void Start()
     {
         yagaAgent = GetComponent<NavMeshAgent>();
-        bool isDone = false;
+        isDone = false;
         //YagaIdle();
 
         //field of view start
@@ -88,14 +88,14 @@ public class YAI2 : MonoBehaviour
             yagaAgent.enabled = false;
             transform.LookAt(yagaDest.transform);
             transform.position = Vector3.MoveTowards(transform.position, yagaDest.transform.position, chaseMovementSpeed * Time.deltaTime);
-            bool isDone = false;
+            isDone = false;
         }
         else if (!canSeePlayer)
         {
             if (!atDest)
             {
                 yagaAgent.enabled = true;
-                Debug.Log("not at dest");
+                //Debug.Log("not at dest");
                 if (!isDone)
                 {
                     YagaIdle();
@@ -104,7 +104,7 @@ public class YAI2 : MonoBehaviour
                     FunctionTimer.Create(SetIsDone, 0.5f);
                 }
             }
-            Debug.Log("cantseeplayer");
+            //Debug.Log("cantseeplayer");
         }
 
     }
