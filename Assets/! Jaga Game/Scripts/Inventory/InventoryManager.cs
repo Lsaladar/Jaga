@@ -5,16 +5,11 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    Item item;
-
     public static InventoryManager Instance;
     public List<Item> Items = new List<Item>();
 
     public Transform itemContent;
     public GameObject inventoryItem;
-
-    //public int slot = 1;
-    //public Image[] iconImage;
 
     void Awake()
     {
@@ -27,22 +22,9 @@ public class InventoryManager : MonoBehaviour
         ListItems();
     }
 
-    //public void AddMediumItem(Item item)
-    //{
-    //    Items.Add(item);
-    //    UpdateInventory();
-    //}
-
-    //public void AddLargeItem(Item item)
-    //{
-    //    Items.Add(item);
-    //    UpdateInventory();
-    //}
-
     public void RemoveItem(Item item)
     {
-        Items.Remove(item);
-        ListItems();
+        Items.Add(item);
     }
 
     public void ListItems()
@@ -50,10 +32,8 @@ public class InventoryManager : MonoBehaviour
         foreach(var item in Items)
         {
             GameObject obj = Instantiate(inventoryItem, itemContent);
-            var itemName = obj.transform.Find("itemName").GetComponent<Text>();
-            var itemIcon = obj.transform.Find("itemIcon").GetComponent<Image>();
+            var itemIcon = obj.transform.Find("Icon").GetComponent<Image>();
 
-            itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
         }
     }

@@ -49,9 +49,12 @@ public class ItemInspect : MonoBehaviour
                 item.position = originalPos.position;
             }
 
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 itemPickUp.PickUpItem();
+                isInspecting = false;
+                cam.UnFreezeTime();
+                item.position = originalPos.position;
             }
         }
     }
