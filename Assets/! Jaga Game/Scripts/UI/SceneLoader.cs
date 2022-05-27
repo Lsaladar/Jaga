@@ -35,8 +35,10 @@ public class SceneLoader : MonoBehaviour
     {
         for (int i = 0; i < scenesLoading.Count; i++)
         {
+            Debug.Log("E");
             while(!scenesLoading[i].isDone)
             {
+                Debug.Log("Loading scene");
                 totalSceneProgress = 0;
 
                 foreach(AsyncOperation operation in scenesLoading)

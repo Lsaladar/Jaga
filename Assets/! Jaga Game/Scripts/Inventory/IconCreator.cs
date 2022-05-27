@@ -42,7 +42,7 @@ public class IconCreator : MonoBehaviour
         }
 
         byte[] bytes = screenShot.EncodeToPNG();
-        System.IO.File.WriteAllBytes(Application.dataPath + "/Icons", bytes);
+        System.IO.File.WriteAllBytes(Application.dataPath + "/Icon", bytes);
 #if UNITY_EDITOR
         AssetDatabase.Refresh();
 #endif
