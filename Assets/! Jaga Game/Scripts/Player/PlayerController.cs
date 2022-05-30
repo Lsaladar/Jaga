@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Variables")]
     public CharacterController controller;
 
+    public HeadBobController headcontrol;
+
     public float speed = 4f;
     public float runSpeed = 8f;
 
@@ -132,21 +134,33 @@ public class PlayerController : MonoBehaviour
 
 
 
+
         if(!journalOn)
         {
-            if(Input.GetKey(KeyCode.Alpha1))
+            if(Input.GetKeyDown(KeyCode.J))
             {
                 journal.SetActive(true);
                 journalIcon.SetActive(false);
                 journalOn = true;
+                canMove = false;
+                headcontrol = GetComponent<HeadBobController>();
+                headcontrol.enabled = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
         }
         else
         {
-            if(Input.GetKey(KeyCode.Escape)){
+            if(Input.GetKeyDown(KeyCode.J))
+            {
                 journal.SetActive(false);
                 journalIcon.SetActive(true);
                 journalOn = false;
+                canMove = true;
+                headcontrol = GetComponent<HeadBobController>();
+                headcontrol.enabled = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
     }

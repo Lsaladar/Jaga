@@ -21,13 +21,18 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Character Controller tests");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Game is now turned off");
+    }
+
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     void Start()
@@ -61,20 +66,10 @@ public class Menu : MonoBehaviour
         if (!isGamePaused)
         {
             //Debug.Log("Game is running");
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 PauseGame();
                 isGamePaused = true;
-            }
-        }
-
-        if (isGamePaused)
-        {
-            //Debug.Log("Game is no longer running");
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                ContinueGame();
-                isGamePaused = false;
             }
         }
     }
