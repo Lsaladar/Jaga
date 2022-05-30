@@ -18,6 +18,9 @@ public class DayCycleController : MonoBehaviour
     public bool isNight;
     private PhysicallyBasedSky sky;
 
+    [Header("YAGA disable/enable (drag yaga gameobject here)")]
+    public GameObject yaga;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,15 @@ public class DayCycleController : MonoBehaviour
             }
 
             UpdateTime();
+        }
+
+        if (isNight)
+        {
+            yaga.SetActive(true);
+        }
+        else if (!isNight)
+        {
+            yaga.SetActive(false);
         }
         
     }
