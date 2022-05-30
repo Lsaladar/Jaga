@@ -18,6 +18,7 @@ public class ItemInspect : MonoBehaviour
     private Vector3 lastPos, currPos;
     public float rotationSpeed = -0.2f;
 
+    ItemPickUp itemPickUp;
     public GameObject inspectionUI;
 
     public Volume volume;
@@ -33,6 +34,8 @@ public class ItemInspect : MonoBehaviour
 
         volume.profile.TryGet(out blur);
         lastPos = Input.mousePosition;
+
+        itemPickUp = GetComponent<ItemPickUp>();
         inspectionUI.SetActive(false);
         blur.active = false;
     }
@@ -52,6 +55,7 @@ public class ItemInspect : MonoBehaviour
                 currPos = Input.mousePosition;
                 Vector3 offset = currPos - lastPos;
                 transform.RotateAround(transform.position, Vector3.up, offset.x * rotationSpeed * Time.deltaTime);
+                transform.RotateAround(transform.position, Vector3.forward, offset.y * -rotationSpeed * Time.deltaTime);
             }
             lastPos = Input.mousePosition;
 
@@ -62,6 +66,14 @@ public class ItemInspect : MonoBehaviour
                 playerInteractions.isInspecting = false;
                 cam.UnFreezeTime();
                 inspectionUI.SetActive(false);
+                item.position = originalPos.position;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                itemPickUp.PickUpItem();
+                isInspecting = false;
+                cam.UnFreezeTime();
                 item.position = originalPos.position;
             }
         }

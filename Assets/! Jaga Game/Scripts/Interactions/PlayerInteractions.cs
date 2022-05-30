@@ -13,6 +13,13 @@ public class PlayerInteractions : MonoBehaviour
 
     public bool isInspecting = false;
 
+    [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Material defaultMaterial;
+
+    private Transform _selection;
+
+    public ItemInspect itemInspect;
+
     void Update()
     {
         InteractionRay();
@@ -25,6 +32,13 @@ public class PlayerInteractions : MonoBehaviour
 
         bool hitSomething = false;
 
+        if (_selection != null)
+        {
+            var selectionRenderer = _selection.GetComponent<Renderer>();
+            selectionRenderer.material = defaultMaterial;
+            _selection = null;
+        }
+
         if(Physics.Raycast(ray, out hit, interactionDistance))
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
@@ -33,12 +47,22 @@ public class PlayerInteractions : MonoBehaviour
             {
                 hitSomething = true;
 
-                if(hit.collider.tag == "Christian_NPC" || hit.collider.tag == "Pagan_NPC" || hit.collider.tag == "NPC")
+                if(hit.collider.name == "Bolek" || hit.collider.name == "Lolek" || hit.collider.name == "Priest" || hit.collider.name == "Chieftan" || hit.collider.name == "Brewess" || hit.collider.name == "Hunter")
                 {
                     interactionText.text = interactable.GetCharacterDescription();
                 }
                 else if(hit.collider.tag == "Interactable Item")
                 {
+                    
+                    var selection = hit.transform;
+                    var selectionRenderer = selection.GetComponent<Renderer>();
+                    if (selectionRenderer != null && !itemInspect.isInspecting)
+                    {
+                        selectionRenderer.material = highlightMaterial;
+                    }
+
+                    _selection = selection;
+
                     interactionText.text = interactable.GetItemDescription();
                 }
                 else if (hit.collider.tag == "Door")
@@ -48,17 +72,17 @@ public class PlayerInteractions : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if(hit.collider.tag == "Christian_NPC")
+                    if(hit.collider.name == "Bolek")
                     {
-                        interactable.ChristianInteract();
+                        interactable.BolekInteract();
                     }
-                    else if(hit.collider.tag == "Pagan_NPC")
+                    else if(hit.collider.name == "Lolek")
                     {
-                        interactable.PaganInteract();
+                        interactable.LolekInteract();
                     }
-                    else if(hit.collider.tag == "NPC")
+                    else if(hit.collider.name == "Priest")
                     {
-                        interactable.NPCInteract();
+                        interactable.PriestInteract();
                     }
                     else if(hit.collider.tag == "Interactable Item")
                     {
