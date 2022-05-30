@@ -14,15 +14,25 @@ public class Menu : MonoBehaviour
 
     public GameObject audioSource;
 
-    public AudioMixer[] mixer;
+    public AudioMixer mixer;
 
     public GameObject pauseMenu;
     [SerializeField] bool isGamePaused = false;
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 
     public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Game is now turned off");
+    }
+
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     void Start()
@@ -62,16 +72,6 @@ public class Menu : MonoBehaviour
                 isGamePaused = true;
             }
         }
-
-        if (isGamePaused)
-        {
-            //Debug.Log("Game is no longer running");
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                ContinueGame();
-                isGamePaused = false;
-            }
-        }
     }
 
     public void SetResolution(int resolutionIndex)
@@ -92,7 +92,7 @@ public class Menu : MonoBehaviour
 
     public void SetLevel(float slider)
     {
-        mixer[0].SetFloat("MusicVolumeMixer", Mathf.Log10(slider) * 20);
+        mixer.SetFloat("MusicVolumeMixer", Mathf.Log10(slider) * 20);
     }
 
     void PauseGame()

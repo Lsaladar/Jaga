@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
 
-[RequireComponent(typeof(HeadBobController))]
-[RequireComponent(typeof(PlayerInteractions))]
+[RequireComponent (typeof(HeadBobController))]
+[RequireComponent (typeof(PlayerInteractions))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Variables")]
     public CharacterController controller;
+
+    public HeadBobController headcontrol;
 
     public float speed = 4f;
     public float runSpeed = 8f;
@@ -36,12 +38,12 @@ public class PlayerController : MonoBehaviour
     public float maxStamina = 100f;
     public float playerStamina = 100f;
 
-    [SerializeField, Range(0, 50)] private float staminaRegen = 0.5f;
-    [SerializeField, Range(0, 50)] private float staminaDrain = 0.5f;
+    [SerializeField, Range (0, 50)] private float staminaRegen = 0.5f;
+    [SerializeField, Range (0, 50)] private float staminaDrain = 0.5f;
 
     [Header("Reputation Variables")]
     public float maxReputation = 100f;
-    public float playerReputation = 15f;
+    public float playerReputation = 70f;
 
     [Header("UI")]
     [SerializeField] private Image staminaProgressUI = null;
@@ -51,15 +53,13 @@ public class PlayerController : MonoBehaviour
     public Flowchart flowchart;
     // public Flowchart flowchart2;
     // bool canInteract1 = false;
-    // bool canInteract2 = false; 
+    // bool canInteract2 = false;
 
     [Space(20)]
     [Header("Journal Variables")]
     public GameObject journal;
     public GameObject journalIcon;
     public bool journalOn = false;
-
-    public AudioSource[] sound;
 
     void Start()
     {
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //playerReputation = flowchart.GetFloatVariable("Reputation");
+        playerReputation = flowchart.GetFloatVariable("Reputation");
 
         if(canMove)
         {
@@ -134,21 +134,33 @@ public class PlayerController : MonoBehaviour
 
 
 
+
         if(!journalOn)
         {
-            if(Input.GetKey(KeyCode.J))
+            if(Input.GetKeyDown(KeyCode.J))
             {
                 journal.SetActive(true);
                 journalIcon.SetActive(false);
                 journalOn = true;
+                canMove = false;
+                headcontrol = GetComponent<HeadBobController>();
+                headcontrol.enabled = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
         }
         else
         {
-            if(Input.GetKey(KeyCode.Escape)){
+            if(Input.GetKeyDown(KeyCode.J))
+            {
                 journal.SetActive(false);
                 journalIcon.SetActive(true);
                 journalOn = false;
+                canMove = true;
+                headcontrol = GetComponent<HeadBobController>();
+                headcontrol.enabled = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
     }
@@ -184,89 +196,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             sliderCanvasGroup.alpha = 1;
-        }
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        Debug.Log("You have triggered an object");
-        if(collider.gameObject.name == "BranchSFX_Trigger")
-        {
-            Debug.Log("Playing sound 1");
-            sound[0].Play();
-        }
-        else if(collider.gameObject.name == "HameringSFX_Trigger")
-        {
-            Debug.Log("Playing sound 2");
-            sound[1].Play();
-        }
-    }
-
-    void OnTriggerStay(Collider collider)
-    {
-        if(collider.gameObject.name == "Water")
-        {
-            if(isMoving)
-            {
-                if (!sound[2].isPlaying)
-                {
-                    Debug.Log("Play sound 3");
-                    sound[2].Play(1);
-
-                    if (sound[2].clip.length > 1.0f)
-                    {
-                        sound[2].Stop();
-                    }
-                }
-            }
-        }
-        else if(collider.gameObject.name == "Ground")
-        {
-            if(isMoving)
-            {
-                if (!sound[3].isPlaying)
-                {
-                    Debug.Log("Play sound 4");
-                    sound[3].Play(1);
-
-                    if (sound[3].clip.length > 1.0f)
-                    {
-                        sound[3].Stop();
-                    }
-                }
-            }
-        }
-        else if(collider.gameObject.name == "Grass")
-        {
-            if(isMoving)
-            {
-                if (!sound[4].isPlaying)
-                {
-                    Debug.Log("Play sound 5");
-                    sound[4].Play(1);
-
-                    if (sound[4].clip.length > 1.0f)
-                    {
-                        sound[4].Stop();
-                    }
-                }
-            }
-        }
-        else if (collider.gameObject.name == "Wood")
-        {
-            if(isMoving)
-            {
-                if (!sound[5].isPlaying)
-                {
-                    Debug.Log("Play sound 6");
-                    sound[5].Play(1);
-
-                    if (sound[5].clip.length > 1.0f)
-                    {
-                        sound[5].Stop();
-                    }
-                }
-            }
         }
     }
 }
