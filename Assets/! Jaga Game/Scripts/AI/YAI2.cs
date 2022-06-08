@@ -130,7 +130,7 @@ public class YAI2 : MonoBehaviour
             yagaAgent.enabled = false;
             FunctionTimer.Create(YagaIdle, Random.Range(5f, 10f));
             Debug.Log("e");
-        } 
+        }
 
     }
 
