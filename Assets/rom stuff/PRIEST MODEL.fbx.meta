@@ -15,7 +15,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -23,7 +24,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -72,12 +73,88 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 7623e23b0af52dc4ebdd4a52f439c4e6
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: PRIEST MODEL(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere.001
+      parentName: PRIEST MODEL(Clone)
+      position: {x: 0.20460004, y: 7.7717676, z: 1.0227673}
+      rotation: {x: -0.7070752, y: -0.0066887885, z: -0.006688789, w: 0.7070751}
+      scale: {x: -11.080722, y: -11.080722, z: -11.080721}
+    - name: High poly
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0, y: 5.7327304, z: 0.34163088}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 103.99109, y: 103.99109, z: 103.99109}
+    - name: Sphere
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0.00182762, y: 3.7008255, z: 0.7067156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 45.12319, y: 45.12319, z: 39.32574}
+    - name: Plane.001
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0, y: 5.0347533, z: 1.4881942}
+      rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+      scale: {x: 93.77489, y: 78.92197, z: 103.60561}
+    - name: Plane.002
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0, y: 6.4418497, z: 1.0199258}
+      rotation: {x: -0.20869735, y: 0, z: -0, w: 0.97798026}
+      scale: {x: 40.152107, y: 39.665627, z: 39.665627}
+    - name: Plane.003
+      parentName: PRIEST MODEL(Clone)
+      position: {x: 0.012210488, y: 4.2437267, z: 1.0590632}
+      rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+      scale: {x: 29.415237, y: 29.415237, z: 29.415237}
+    - name: Low poly
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0, y: 5.7327304, z: 0.34163094}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 103.99109, y: 103.99109, z: 103.99109}
+    - name: Mesh
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.70699185, y: -0.012753791, z: -0.012753794, w: 0.70699173}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Mesh.001
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0.027380358, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: NurbsPath
+      parentName: PRIEST MODEL(Clone)
+      position: {x: 0.0013367906, y: 6.3896685, z: 1.4793566}
+      rotation: {x: 0.51567936, y: 0.5156801, z: 0.48381212, w: -0.48381272}
+      scale: {x: 15.900505, y: 15.900505, z: 15.900505}
+    - name: Cube
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0.011690953, y: 6.087176, z: 1.2857336}
+      rotation: {x: -0.83843994, y: 0, z: -0, w: 0.54499406}
+      scale: {x: 4.7111144, y: 2.3262365, z: 4.7111144}
+    - name: Sphere.003
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0.00182762, y: 1.8307154, z: 0.39449635}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 45.12319, y: 45.12319, z: 50.6288}
+    - name: Plane.004
+      parentName: PRIEST MODEL(Clone)
+      position: {x: 0.0040785256, y: -0.066823855, z: 0.4951229}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 72.35951, y: 60.434486, z: 63.137333}
+    - name: Sphere.002
+      parentName: PRIEST MODEL(Clone)
+      position: {x: -0.20528619, y: 7.7717676, z: 1.0169661}
+      rotation: {x: -0.70535535, y: -0.049738146, z: -0.049738146, w: 0.7053553}
+      scale: {x: -11.080721, y: -11.080721, z: -11.080721}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -88,13 +165,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

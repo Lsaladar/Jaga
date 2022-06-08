@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4161150996526349264}
   - component: {fileID: 4161150996526349265}
   - component: {fileID: 4161150996526349266}
-  - component: {fileID: 4161150996526349267}
   - component: {fileID: 4161150996526349250}
   - component: {fileID: 4161150996526349251}
   - component: {fileID: 4161150996526349252}
@@ -73,7 +72,8 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 4161150996526349265}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 0}
   variables: []
   description: 
   stepPause: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 4161150996526349267}
+  - {fileID: 0}
   - {fileID: 4161150996526349266}
   - {fileID: 4161150996526349250}
   - {fileID: 4161150996526349251}
@@ -138,27 +138,6 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   methodName: FreezeTime
   delay: 0
---- !u!114 &4161150996526349267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4161150996526349268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 156
-  indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &4161150996526349250
 MonoBehaviour:
   m_ObjectHideFlags: 0

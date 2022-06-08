@@ -21,6 +21,8 @@ public class DayCycleController : MonoBehaviour
     [Header("YAGA disable/enable (drag yaga gameobject here)")]
     public GameObject yaga;
 
+    public GameObject nightShrooms;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,10 +46,12 @@ public class DayCycleController : MonoBehaviour
         if (isNight)
         {
             yaga.SetActive(true);
+            nightShrooms.SetActive(true);
         }
         else if (!isNight)
         {
             yaga.SetActive(false);
+            nightShrooms.SetActive(false);
         }
         
     }
