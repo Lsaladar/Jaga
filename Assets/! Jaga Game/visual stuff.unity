@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1421.7544, g: 1350.6104, b: 2020.1094, a: 1}
+  m_IndirectSpecularColor: {r: 1422.7119, g: 1348.7842, b: 2011.2969, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &673428410
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5096,13 +5096,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714821009}
-  m_LocalRotation: {x: 0.081184745, y: -0.29829487, z: 0.0254735, w: 0.9506737}
-  m_LocalPosition: {x: 8, y: 8.9, z: -2.2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.79, y: 3.05, z: 2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 9.762, y: -34.841, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &714821013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5553,7 +5553,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10038,7 +10038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1161221555
 Transform:
   m_ObjectHideFlags: 0
@@ -10047,7 +10047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161221554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2641546, y: 0.82731676, z: 0.63070345}
+  m_LocalPosition: {x: -0.16, y: 0.82731676, z: 9.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1656869399}
@@ -15231,7 +15231,7 @@ Transform:
   m_Children:
   - {fileID: 2061040220}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1656869398
 GameObject:
@@ -20528,6 +20528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree 2
       objectReference: {fileID: 0}
+    - target: {fileID: 283718859275044485, guid: 019ad83435a51484983ef808e53eafd6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6168567971673164491, guid: 019ad83435a51484983ef808e53eafd6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -20599,7 +20603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 140074194529278542, guid: 1cc7274d22f39904d935e1eac818a02c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 140074194529278543, guid: 1cc7274d22f39904d935e1eac818a02c, type: 3}
       propertyPath: m_RootOrder
@@ -20657,6 +20661,10 @@ PrefabInstance:
     - target: {fileID: 3525485128544113712, guid: 394074041de02eb4fa3906d392224379, type: 3}
       propertyPath: m_Name
       value: Grass_Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525485128544113712, guid: 394074041de02eb4fa3906d392224379, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3525485128544208912, guid: 394074041de02eb4fa3906d392224379, type: 3}
       propertyPath: m_RootOrder
