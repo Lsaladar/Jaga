@@ -112,7 +112,7 @@ public class YAI2 : MonoBehaviour
     void YagaIdle()
     {
         //Assign destination
-        bool atDest = false;
+        atDest = false;
         yagaAgent.enabled = true;
         int rand = Random.Range(0, 9);
         yagaAgent.destination = des[rand].transform.position;
@@ -126,7 +126,7 @@ public class YAI2 : MonoBehaviour
     {
         if (other.tag == "DesPoints")
         {
-            bool atDest = true;
+            atDest = true;
             yagaAgent.enabled = false;
             FunctionTimer.Create(YagaIdle, Random.Range(5f, 10f));
             Debug.Log("e");
